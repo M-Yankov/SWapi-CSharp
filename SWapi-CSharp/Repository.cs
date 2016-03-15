@@ -47,6 +47,11 @@
             while (helper.Next != null)
             {
                 jsonResponse = this.GetResultFromResponse(helper.Next);
+                if (jsonResponse == null)
+                {
+                    return null;
+                }
+
                 helper = JsonConvert.DeserializeObject<Helper<T>>(jsonResponse);
                 results = results.Union(helper.Results);
 
@@ -77,6 +82,7 @@
             }
             catch (WebException ex)
             {
+                //// TODO: Check status when there are no Internet connection. 
                 return null;
             }
         }
