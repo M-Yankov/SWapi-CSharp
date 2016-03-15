@@ -1,7 +1,7 @@
 ﻿namespace Example
 {
-    using StarWarsApiCSharp;
     using System;
+    using StarWarsApiCSharp;
 
     public class MyPerson : Person
     {

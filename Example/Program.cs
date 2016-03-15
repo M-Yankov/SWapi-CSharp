@@ -6,7 +6,7 @@
 
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             IRepository<Planet> planetsRepo = new Repository<Planet>();
             IRepository<Vehicle> vehicleRepo = new Repository<Vehicle>();

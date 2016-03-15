@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public interface IRepository<T>  where T : BaseEntity
+    public interface IRepository<T> where T : BaseEntity
     {
         T GetById(int id);
 
