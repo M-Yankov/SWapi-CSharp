@@ -7,6 +7,11 @@
     using System.Net;
     using Newtonsoft.Json;
 
+    /// <summary>
+    /// Class Repository holds <see cref="StarWarsApiCSharp.IRepository{T}" /> entities to work with them.
+    /// </summary>
+    /// <typeparam name="T"><see cref="StarWarsApiCSharp.IRepository{T}" /></typeparam>
+    /// <seealso cref="StarWarsApiCSharp.IRepository{T}" />
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
         private const string Api = "http://swapi.co/api/";
@@ -14,6 +19,9 @@
         private const int DefaultSize = 10;
         private T entity;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Repository{T}"/> class.
+        /// </summary>
         public Repository()
         {
             this.entity = (T)Activator.CreateInstance<T>();
@@ -21,6 +29,11 @@
 
         protected virtual string Path { get; }
 
+        /// <summary>
+        /// Gets the entity by it's identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns><see cref="StarWarsApiCSharp.IRepository{T}" /></returns>
         public T GetById(int id)
         {
             string url = Api + this.entity.GetPath() + id;
@@ -33,6 +46,12 @@
             return JsonConvert.DeserializeObject<T>(jsonResponse);
         }
 
+        /// <summary>
+        /// Gets all entities.
+        /// </summary>
+        /// <param name="page">The page.</param>
+        /// <param name="size">The size of the entities.</param>
+        /// <returns>ICollection&lt; <see cref="StarWarsApiCSharp.IRepository{T}" /> &gt;.</returns>
         public ICollection<T> GetAll(int page = DefaultPage, int size = DefaultSize)
         {
             string url = Api + this.entity.GetPath() + "?page=" + page;
@@ -64,6 +83,11 @@
             return results.ToList();
         }
 
+        /// <summary>
+        /// Gets the result from response helper method.
+        /// </summary>
+        /// <param name="url">The URL.</param>
+        /// <returns>System.String or null if there are error while processing the request.</returns>
         private string GetResultFromResponse(string url)
         {
             WebRequest request = WebRequest.Create(url);
