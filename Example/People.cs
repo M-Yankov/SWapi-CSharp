@@ -3,13 +3,21 @@
     using System;
     using StarWarsApiCSharp;
 
-    public class People
+    public class People : IExecutor
     {
         public void Execute()
         {
             IRepository<MyPerson> peopleRepo = new Repository<MyPerson>();
-            MyPerson justSomeOne = peopleRepo.GetById(10);
-            Console.WriteLine(justSomeOne.ToString());
+            MyPerson kenobi = peopleRepo.GetById(10);
+
+            if (kenobi != null)
+            {
+                Console.WriteLine(kenobi.ToString());
+            }
+            else
+            {
+                Console.WriteLine("Cannot find this person!");
+            }
         }
     }
 }

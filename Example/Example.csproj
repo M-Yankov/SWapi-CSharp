@@ -48,8 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Films.cs" />
+    <Compile Include="IExecutor.cs" />
     <Compile Include="MyPerson.cs" />
     <Compile Include="People.cs" />
+    <Compile Include="Planets.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Starships.cs" />

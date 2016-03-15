@@ -3,7 +3,7 @@
     using System;
     using StarWarsApiCSharp;
 
-    public class Starships
+    public class Starships : IExecutor
     {
         public void Execute()
         {
@@ -12,20 +12,24 @@
             IRepository<Starship> starshipRepo = new Repository<Starship>();
 
             Starship starshipDetails = starshipRepo.GetById(starshipId);
-            Console.WriteLine("Starship name: " + starshipDetails.Name);
-
             Starship anotherStarship = starshipRepo.GetById(nonExistingId);
-            
-            //// if anotherStarship is null this will throw an exception.
-            //// Console.WriteLine(another.Name);
-            //// So make sure starship is found!
-            if (anotherStarship != null)
+
+            this.PrintStarshipName(starshipDetails, starshipId);
+            this.PrintStarshipName(anotherStarship, nonExistingId);
+        }
+
+        //// if anotherStarship is null this will throw an exception.
+        //// Console.WriteLine(another.Name);
+        //// So make sure starship is found!
+        private void PrintStarshipName(Starship starship, int starshipID)
+        {
+            if (starship != null)
             {
-                Console.WriteLine(anotherStarship.Name);
+                Console.WriteLine(starship.Name);
             }
             else
             {
-                Console.WriteLine("Cannot find starship with id: " + nonExistingId);
+                Console.WriteLine("Cannot find starship with id: " + starshipID);
             }
         }
     }

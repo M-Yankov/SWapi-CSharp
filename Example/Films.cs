@@ -3,12 +3,18 @@
     using System;
     using StarWarsApiCSharp;
 
-    public class Films
+    public class Films : IExecutor
     {
         public void Execute()
         {
             IRepository<Film> filmsRepo = new Repository<Film>();
             var films = filmsRepo.GetAll(size: int.MaxValue);
+
+            if (films == null)
+            {
+                Console.WriteLine("No films!");
+                return;
+            }
 
             foreach (var film in films)
             {
