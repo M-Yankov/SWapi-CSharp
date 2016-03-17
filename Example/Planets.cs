@@ -8,22 +8,23 @@
         public void Execute()
         {
             int page = 2;
+            int size = 5;
             var plnetsRepository = new Repository<Planet>();
-            var planets = plnetsRepository.GetEntities(page, 5);
+
+            var planets = plnetsRepository.GetEntities(page, size);
 
             if (planets == null)
             {
                 Console.WriteLine("There are no planets on page {0}", page);
+                return;
             }
-            else
+
+            int index = 1;
+            foreach (var planet in planets)
             {
-                int index = 1;
-                foreach (var planet in planets)
-                {
-                    Console.WriteLine(index + ". Name: " + planet.Name);
-                    Console.WriteLine("   Terrain: " + planet.Terrain);
-                    index++;
-                }
+                Console.WriteLine(index + ". Name: " + planet.Name);
+                Console.WriteLine("   Terrain: " + planet.Terrain);
+                index++;
             }
         }
     }

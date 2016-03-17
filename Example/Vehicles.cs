@@ -7,8 +7,9 @@
     {
         public void Execute()
         {
-            Repository<Vehicle> vehicleRepository = new Repository<Vehicle>();
-            Repository<Film> filmRepository = new Repository<Film>();
+            IRepository<Vehicle> vehicleRepository = new Repository<Vehicle>();
+
+            IRepository<Film> filmRepository = new Repository<Film>();
 
             int vehicleId = 8;
             Vehicle vehicle = vehicleRepository.GetById(vehicleId);
@@ -19,12 +20,15 @@
                 foreach (var film in vehicle.Films)
                 {
                     int filmId = this.GetFilmId(film);
+                    
+                    //// getting related items should be done manual
                     Film relatedFilm = filmRepository.GetById(filmId);
                     Console.WriteLine(relatedFilm.Title);
                 }
             }
         }
 
+        //// Helper method for extract id from URL.
         private int GetFilmId(string filmUrl)
         {
             //// filmUrl = http://swapi.co/api/films/<Id>/
