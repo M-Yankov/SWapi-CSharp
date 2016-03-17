@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWapi-CSharp", "SWapi-CShar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{81247013-D0DC-417B-BD04-91FA27B93F80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{57F1DEC0-3EFE-464A-9ECC-A21E068A237D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{81247013-D0DC-417B-BD04-91FA27B93F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81247013-D0DC-417B-BD04-91FA27B93F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81247013-D0DC-417B-BD04-91FA27B93F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57F1DEC0-3EFE-464A-9ECC-A21E068A237D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F1DEC0-3EFE-464A-9ECC-A21E068A237D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F1DEC0-3EFE-464A-9ECC-A21E068A237D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F1DEC0-3EFE-464A-9ECC-A21E068A237D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,7 +9,7 @@
         {
             int page = 2;
             var plnetsRepository = new Repository<Planet>();
-            var planets = plnetsRepository.GetAll(page, 5);
+            var planets = plnetsRepository.GetEntities(page, 5);
 
             if (planets == null)
             {

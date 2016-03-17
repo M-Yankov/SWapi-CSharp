@@ -8,7 +8,7 @@
         public void Execute()
         {
             IRepository<Film> filmsRepo = new Repository<Film>();
-            var films = filmsRepo.GetAll(size: int.MaxValue);
+            var films = filmsRepo.GetEntities(size: int.MaxValue);
 
             if (films == null)
             {

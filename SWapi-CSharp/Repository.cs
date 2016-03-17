@@ -1,4 +1,17 @@
-﻿namespace StarWarsApiCSharp
+﻿// ***********************************************************************
+// Assembly         : StarWarsApiCSharp
+// Author           : M.Yankov
+// Created          : 02-06-2016
+//
+// Last Modified By : M.Yankov
+// Last Modified On : 03-17-2016
+// ***********************************************************************
+// <copyright file="Repository.cs" company="M-Yankov">
+//     Copyright ©  2016
+// </copyright>
+// <summary>Contains generic repository class.</summary>
+// ***********************************************************************
+namespace StarWarsApiCSharp
 {
     using System;
     using System.Collections.Generic;
@@ -10,23 +23,43 @@
     /// <summary>
     /// Class Repository holds <see cref="StarWarsApiCSharp.IRepository{T}" /> entities to work with them.
     /// </summary>
-    /// <typeparam name="T"><see cref="StarWarsApiCSharp.IRepository{T}" /></typeparam>
+    /// <typeparam name="T"><see cref="StarWarsApiCSharp.IRepository{T}" />Base entity.</typeparam>
     /// <seealso cref="StarWarsApiCSharp.IRepository{T}" />
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
+        /// <summary>
+        /// The base API URL from where entities are downloaded.
+        /// </summary>
         private const string Api = "http://swapi.co/api/";
+
+        /// <summary>
+        /// The default page.
+        /// </summary>
         private const int DefaultPage = 1;
+
+        /// <summary>
+        /// The default size of entities.
+        /// </summary>
         private const int DefaultSize = 10;
+
+        /// <summary>
+        /// The base entity.
+        /// <seealso cref="StarWarsApiCSharp.BaseEntity" />
+        /// </summary>
         private T entity;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Repository{T}"/> class.
+        /// Initializes a new instance of the <see cref="Repository{T}" /> class.
         /// </summary>
         public Repository()
         {
             this.entity = (T)Activator.CreateInstance<T>();
         }
 
+        /// <summary>
+        /// Gets the path.
+        /// </summary>
+        /// <value>The path.</value>
         protected virtual string Path { get; }
 
         /// <summary>
@@ -47,12 +80,12 @@
         }
 
         /// <summary>
-        /// Gets all entities.
+        /// Gets entities.
         /// </summary>
         /// <param name="page">The page.</param>
         /// <param name="size">The size of the entities.</param>
         /// <returns>ICollection&lt; <see cref="StarWarsApiCSharp.IRepository{T}" /> &gt;.</returns>
-        public ICollection<T> GetAll(int page = DefaultPage, int size = DefaultSize)
+        public ICollection<T> GetEntities(int page = DefaultPage, int size = DefaultSize)
         {
             string url = Api + this.entity.GetPath() + "?page=" + page;
             IEnumerable<T> results = new List<T>();

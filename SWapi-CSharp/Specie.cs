@@ -1,4 +1,17 @@
-﻿namespace StarWarsApiCSharp
+﻿// ***********************************************************************
+// Assembly         : StarWarsApiCSharp
+// Author           : M.Yankov
+// Created          : 02-27-2016
+//
+// Last Modified By : M.Yankov
+// Last Modified On : 03-17-2016
+// ***********************************************************************
+// <copyright file="Specie.cs" company="M-Yankov">
+//     Copyright ©  2016
+// </copyright>
+// <summary>Contains Specie model.</summary>
+// ***********************************************************************
+namespace StarWarsApiCSharp
 {
     using System;
     using System.Collections.Generic;
@@ -10,91 +23,94 @@
     /// <seealso cref="StarWarsApiCSharp.BaseEntity" />
     public class Specie : BaseEntity
     {
+        /// <summary>
+        /// The path that will be added to base API URL.
+        /// </summary>
         private const string PathToEntity = "species/";
 
         /// <summary>
-        /// Gets or sets the name.
+        /// Gets the name.
         /// </summary>
         /// <value>The name.</value>
         [JsonProperty]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the classification.
+        /// Gets the classification. It can return "unknown" as value.
         /// </summary>
         /// <value>The classification.</value>
         [JsonProperty]
-        public string Classification { get; set; }
+        public string Classification { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the designation.
+        /// Gets the designation.
         /// </summary>
         /// <value>The designation.</value>
         [JsonProperty]
-        public string Designation { get; set; }
+        public string Designation { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the average height.
+        /// Gets the average height. It can return "unknown" as value.
         /// </summary>
         /// <value>The average height.</value>
         [JsonProperty(PropertyName = "average_height")]
-        public string AverageHeight { get; set; }
+        public string AverageHeight { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the average lifespan.
+        /// Gets the average lifespan. It can return "unknown" as value.
         /// </summary>
         /// <value>The average lifespan.</value>
         [JsonProperty(PropertyName = "average_lifespan")]
-        public string AverageLifespan { get; set; }
+        public string AverageLifespan { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the eye colors.
+        /// Gets the eye colors. Variables joined by comma and space. It can return "unknown" as value.
         /// </summary>
         /// <value>The eye colors.</value>
         [JsonProperty(PropertyName = "eye_colors")]
-        public string EyeColors { get; set; }
+        public string EyeColors { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the hair colors.
+        /// Gets the hair colors. Variables joined by comma and space. It can return "unknown" as value.
         /// </summary>
         /// <value>The hair colors.</value>
         [JsonProperty(PropertyName = "hair_colors")]
-        public string HairColors { get; set; }
+        public string HairColors { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the skin colors.
+        /// Gets the skin colors. Variables joined by comma and space.
         /// </summary>
         /// <value>The skin colors.</value>
         [JsonProperty(PropertyName = "skin_colors")]
-        public string SkinColors { get; set; }
+        public string SkinColors { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the language.
+        /// Gets the language. It can return "unknown" as value.
         /// </summary>
         /// <value>The language.</value>
         [JsonProperty]
-        public string Language { get; set; }
+        public string Language { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the homeworld.
+        /// Gets the home world.
         /// </summary>
-        /// <value>The homeworld.</value>
+        /// <value>The home world.</value>
         [JsonProperty]
-        public string Homeworld { get; set; }
+        public string Homeworld { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the people URLs.
+        /// Gets the people URLs.
         /// </summary>
         /// <value>The people.</value>
         [JsonProperty]
-        public ICollection<string> People { get; set; }
+        public ICollection<string> People { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the films URLs.
+        /// Gets the films URLs.
         /// </summary>
         /// <value>The films.</value>
         [JsonProperty]
-        public ICollection<string> Films { get; set; }
+        public ICollection<string> Films { get; internal set; }
 
         /// <summary>
         /// Gets the path for extending base URL API.

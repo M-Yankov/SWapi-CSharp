@@ -1,4 +1,17 @@
-﻿namespace StarWarsApiCSharp
+﻿// ***********************************************************************
+// Assembly         : StarWarsApiCSharp
+// Author           : M.Yankov
+// Created          : 02-06-2016
+//
+// Last Modified By : M.Yankov
+// Last Modified On : 03-17-2016
+// ***********************************************************************
+// <copyright file="BaseEntity.cs" company="M-Yankov">
+//     Copyright ©  2016
+// </copyright>
+// <summary>Base entity class contains common data.</summary>
+// ***********************************************************************
+namespace StarWarsApiCSharp
 {
     using System;
     using Newtonsoft.Json;
@@ -9,22 +22,22 @@
     public abstract class BaseEntity
     {
         /// <summary>
-        /// URL from where was downloaded the entity.
+        /// Gets the URL from where was downloaded the entity.
         /// </summary>
         [JsonProperty]
-        public string Url { get; set; }
+        public string Url { get; internal set; }
 
         /// <summary>
-        /// Date of creation of the entity.
+        /// Gets the date of creation of the entity.
         /// </summary>
         [JsonProperty]
-        public DateTime Created { get; set; }
+        public DateTime Created { get; internal set; }
 
         /// <summary>
-        /// Date of last modification.
+        /// Gets the date of last modification.
         /// </summary>
         [JsonProperty]
-        public DateTime Edited { get; set; }
+        public DateTime Edited { get; internal set; }
         
         /// <summary>
         /// Gets the path.
@@ -34,7 +47,7 @@
         /// <summary>
         /// Gets the path for extending base URL API.
         /// </summary>
-        /// <returns>System.String.</returns>
+        /// <returns>System.String the path.</returns>
         public string GetPath()
         {
             return this.Path;
