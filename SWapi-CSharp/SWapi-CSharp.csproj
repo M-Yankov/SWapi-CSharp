@@ -53,8 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="DefaultDataService.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="Helper.cs" />
+    <Compile Include="IDataService.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Planet.cs" />

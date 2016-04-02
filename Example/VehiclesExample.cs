@@ -3,7 +3,7 @@
     using System;
     using StarWarsApiCSharp;
 
-    public class Vehicles : IExecutor
+    public class VehiclesExample : IExecutor
     {
         public void Execute()
         {
@@ -32,6 +32,8 @@
         private int GetFilmId(string filmUrl)
         {
             //// filmUrl = http://swapi.co/api/films/<Id>/
+
+            // TODO: will not work if the Id has two digits.
 
             int indexOfId = filmUrl.Length - 2;
             int result = int.Parse(filmUrl[indexOfId].ToString());

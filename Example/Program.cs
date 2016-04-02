@@ -2,6 +2,7 @@
 {
     using System;
     using System.Linq;
+    using ServiceDemo;
     using StarWarsApiCSharp;
 
     public class Program
@@ -15,12 +16,14 @@
             ConsoleColor backgroundColor = ConsoleColor.DarkBlue;
             string template = "Press [Enter] to process with {0} example";
 
-            ProcessExecuteCommand(new Films(), template, "Films", backgroundColor);
-            ProcessExecuteCommand(new Starships(), template, "Starhips", backgroundColor);
-            ProcessExecuteCommand(new People(), template, "People", backgroundColor);
-            ProcessExecuteCommand(new Planets(), template, "Planets", backgroundColor);
-            ProcessExecuteCommand(new Species(), template, "Species", backgroundColor);
-            ProcessExecuteCommand(new Vehicles(), template, "Vehicles", backgroundColor);
+            ProcessExecuteCommand(new FilmsFromFileDemo(), template, "Another service example", backgroundColor);
+
+            //ProcessExecuteCommand(new FilmsExample(), template, "Films", backgroundColor);
+            //ProcessExecuteCommand(new StarshipsExample(), template, "Starhips", backgroundColor);
+            //ProcessExecuteCommand(new People(), template, "People", backgroundColor);
+            //ProcessExecuteCommand(new Planets(), template, "Planets", backgroundColor);
+            //ProcessExecuteCommand(new Species(), template, "Species", backgroundColor);
+            //ProcessExecuteCommand(new Vehicles(), template, "Vehicles", backgroundColor);
         }
 
         private static void ProcessExecuteCommand(

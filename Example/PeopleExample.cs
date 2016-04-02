@@ -3,7 +3,7 @@
     using System;
     using StarWarsApiCSharp;
 
-    public class People : IExecutor
+    public class PeopleExample : IExecutor
     {
         public void Execute()
         {

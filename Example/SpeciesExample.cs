@@ -3,7 +3,7 @@
     using System;
     using StarWarsApiCSharp;
 
-    public class Species : IExecutor
+    public class SpeciesExample : IExecutor
     {
         public void Execute()
         {

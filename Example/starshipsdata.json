@@ -1,0 +1,79 @@
+{
+  "next": null,
+  "prev": null,
+  "results": [
+    {
+      "name": "Star Destroyer",
+      "model": "Imperial I-class Star Destroyer",
+      "manufacturer": "Kuat Drive Yards",
+      "cost_in_credits": "150000000",
+      "length": "1,600",
+      "max_atmosphering_speed": "975",
+      "crew": "47060",
+      "passengers": "0",
+      "cargo_capacity": "36000000",
+      "consumables": "2 years",
+      "hyperdrive_rating": "2.0",
+      "MGLT": "60",
+      "starship_class": "Star Destroyer",
+      "pilots": [ ],
+      "films": [
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/1/"
+      ],
+      "created": "2014-12-10T15:08:19.848000Z",
+      "edited": "2014-12-22T17:35:44.410941Z",
+      "url": "http://swapi.co/api/starships/3/"
+    },
+    {
+      "name": "Test Starship",
+      "model": "Best Model",
+      "manufacturer": "Test manufacturer",
+      "cost_in_credits": "15",
+      "length": "1,60",
+      "max_atmosphering_speed": "20",
+      "crew": "595",
+      "passengers": "0",
+      "cargo_capacity": "78000",
+      "consumables": "1 day",
+      "hyperdrive_rating": "2.0",
+      "MGLT": "60",
+      "starship_class": "Test class",
+      "pilots": [ ],
+      "films": [
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/1/"
+      ],
+      "created": "2014-12-10T15:08:19.848000Z",
+      "edited": "2014-12-22T17:35:44.410941Z",
+      "url": "http://swapi.co/api/starships/999/"
+    },
+    {
+      "name": "Copy of test starship",
+      "model": "starship model",
+      "manufacturer": "John doe",
+      "cost_in_credits": "8900",
+      "length": "2,30",
+      "max_atmosphering_speed": "15",
+      "crew": "90",
+      "passengers": "0",
+      "cargo_capacity": "360",
+      "consumables": "1 day",
+      "hyperdrive_rating": "2.0",
+      "MGLT": "60",
+      "starship_class": "test",
+      "pilots": [ ],
+      "films": [
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/1/"
+      ],
+      "created": "2014-12-10T15:08:19.848000Z",
+      "edited": "2014-12-22T17:35:44.410941Z",
+      "url": "http://swapi.co/api/starships/133/"
+    }
+  ],
+  "count": 1
+}

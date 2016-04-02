@@ -28,7 +28,7 @@ namespace StarWarsApiCSharp
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
         /// <summary>
-        /// The base API URL from where entities are downloaded.
+        /// The default API URL from where entities are downloaded.
         /// </summary>
         private const string Api = "http://swapi.co/api/";
 
@@ -43,17 +43,51 @@ namespace StarWarsApiCSharp
         private const int DefaultSize = 10;
 
         /// <summary>
+        /// The URL data that will be used in data service.
+        /// </summary>
+        private string urlData;
+
+        /// <summary>
+        /// The data service for entities.
+        /// </summary>
+        private IDataService dataService; 
+
+        /// <summary>
         /// The base entity.
         /// <seealso cref="StarWarsApiCSharp.BaseEntity" />
         /// </summary>
         private T entity;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Repository{T}" /> class.
+        /// Initializes a new instance of the <see cref="Repository{T}" /> class. 
+        /// Uses the default data service and URL for gather data.
         /// </summary>
         public Repository()
+            : this(new DefaultDataService(), Api)
         {
-            this.entity = (T)Activator.CreateInstance<T>();
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Repository{T}"/> class. Uses a default URL for gather data.
+        /// </summary>
+        /// <param name="dataService">The data service to get entities.</param>
+        /// <example>Data service getting data from JSON document, other database etc.</example>
+        public Repository(IDataService dataService)
+            : this(dataService, Api)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Repository{T}"/> class.
+        /// </summary>
+        /// <param name="dataService">The data service to get entities.</param>
+        /// <param name="url">The URL for consuming. It will be used in the service.</param>
+        /// <example>Data service getting data from JSON document, other database etc.</example>
+        public Repository(IDataService dataService, string url)
+        {
+            this.entity = Activator.CreateInstance<T>();
+            this.dataService = dataService;
+            this.urlData = url;
         }
 
         /// <summary>
@@ -65,12 +99,14 @@ namespace StarWarsApiCSharp
         /// <summary>
         /// Gets the entity by it's identifier.
         /// </summary>
-        /// <param name="id">The identifier.</param>
+        /// <param name="id">The identifier of the entity.</param>
         /// <returns><see cref="StarWarsApiCSharp.IRepository{T}" /></returns>
         public T GetById(int id)
         {
-            string url = Api + this.entity.GetPath() + id;
-            string jsonResponse = this.GetResultFromResponse(url);
+            // TODO: override-able GetPath Method ??
+            // TODO: separate UrlBuilderClass
+            string url = this.urlData + this.entity.GetPath() + id;
+            string jsonResponse = this.dataService.GetDataResult(url);
             if (jsonResponse == null)
             {
                 return null;
@@ -87,7 +123,7 @@ namespace StarWarsApiCSharp
         /// <returns>ICollection&lt; <see cref="StarWarsApiCSharp.IRepository{T}" /> &gt;.</returns>
         public ICollection<T> GetEntities(int page = DefaultPage, int size = DefaultSize)
         {
-            string url = Api + this.entity.GetPath() + "?page=" + page;
+            string url = this.urlData + this.entity.GetPath() + "?page=" + page;
             IEnumerable<T> results = new List<T>();
             var helper = new Helper<T>()
             {
@@ -98,7 +134,7 @@ namespace StarWarsApiCSharp
 
             while (helper.Next != null)
             {
-                jsonResponse = this.GetResultFromResponse(helper.Next);
+                jsonResponse = this.dataService.GetDataResult(helper.Next);
                 if (jsonResponse == null)
                 {
                     return null;
@@ -114,34 +150,6 @@ namespace StarWarsApiCSharp
             }
 
             return results.ToList();
-        }
-
-        /// <summary>
-        /// Gets the result from response helper method.
-        /// </summary>
-        /// <param name="url">The URL.</param>
-        /// <returns>System.String or null if there are error while processing the request.</returns>
-        private string GetResultFromResponse(string url)
-        {
-            WebRequest request = WebRequest.Create(url);
-            WebResponse response = null;
-
-            try
-            {
-                response = request.GetResponse();
-                string json = string.Empty;
-                using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                {
-                    json = reader.ReadToEnd();
-                }
-
-                return json;
-            }
-            catch (WebException ex)
-            {
-                //// TODO: Check status when there are no Internet connection. 
-                return null;
-            }
         }
     }
 }

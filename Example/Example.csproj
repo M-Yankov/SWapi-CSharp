@@ -47,20 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Films.cs" />
+    <Compile Include="FilmsExample.cs" />
     <Compile Include="IExecutor.cs" />
     <Compile Include="MyPerson.cs" />
-    <Compile Include="People.cs" />
-    <Compile Include="Planets.cs" />
+    <Compile Include="PeopleExample.cs" />
+    <Compile Include="PlanetsExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Species.cs" />
-    <Compile Include="Starships.cs" />
-    <Compile Include="Vehicles.cs" />
+    <Compile Include="ServiceDemo\FilmsFromFileDemo.cs" />
+    <Compile Include="ServiceDemo\JsonFileService.cs" />
+    <Compile Include="SpeciesExample.cs" />
+    <Compile Include="StarshipsExample.cs" />
+    <Compile Include="VehiclesExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="filmsdata.json" />
+    <None Include="starshipsdata.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SWapi-CSharp\SWapi-CSharp.csproj">
