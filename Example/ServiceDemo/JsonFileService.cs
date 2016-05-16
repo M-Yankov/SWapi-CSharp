@@ -1,17 +1,15 @@
-﻿
-namespace Example.ServiceDemo
+﻿namespace Example.ServiceDemo
 {
-    using System;
-    using StarWarsApiCSharp;
-    using System.Reflection;
     using System.IO;
     using System.Text;
+    using StarWarsApiCSharp;
+
     public class JsonFileService : IDataService
     {
         public string GetDataResult(string url)
         {
-            // Id - 
-            // many -
+            // Id - ends with /<id>  -> starshipsdata.json/2
+            // many - end with \?page=<page> -> starshipsdata.json\?page=2
 
             if (this.IsUrlContinsId(url))
             {

@@ -43,6 +43,11 @@ namespace StarWarsApiCSharp
         private const int DefaultSize = 10;
 
         /// <summary>
+        /// The URL end character. By default is "/" slash.
+        /// </summary>
+        private string urlEndCharacter = "/";
+
+        /// <summary>
         /// The URL data that will be used in data service.
         /// </summary>
         private string urlData;
@@ -50,7 +55,7 @@ namespace StarWarsApiCSharp
         /// <summary>
         /// The data service for entities.
         /// </summary>
-        private IDataService dataService; 
+        private IDataService dataService;
 
         /// <summary>
         /// The base entity.
@@ -81,20 +86,32 @@ namespace StarWarsApiCSharp
         /// Initializes a new instance of the <see cref="Repository{T}"/> class.
         /// </summary>
         /// <param name="dataService">The data service to get entities.</param>
-        /// <param name="url">The URL for consuming. It will be used in the service.</param>
+        /// <param name="url">The URL for consuming. It will be used in the service. Examples: http://mySite.com, http://mySite.com/ .</param>
         /// <example>Data service getting data from JSON document, other database etc.</example>
         public Repository(IDataService dataService, string url)
         {
             this.entity = Activator.CreateInstance<T>();
             this.dataService = dataService;
+
+            if (!url.EndsWith(this.urlEndCharacter))
+            {
+                url += this.urlEndCharacter;
+            }
+
             this.urlData = url;
         }
 
         /// <summary>
-        /// Gets the path.
+        /// Gets the base path for consuming entities.
         /// </summary>
         /// <value>The path.</value>
-        protected virtual string Path { get; }
+        public string Path
+        {
+            get
+            {
+                return this.urlData;
+            }
+        }
 
         /// <summary>
         /// Gets the entity by it's identifier.
@@ -123,6 +140,7 @@ namespace StarWarsApiCSharp
         /// <returns>ICollection&lt; <see cref="StarWarsApiCSharp.IRepository{T}" /> &gt;.</returns>
         public ICollection<T> GetEntities(int page = DefaultPage, int size = DefaultSize)
         {
+            // TODO: separate UrlBuilderClass
             string url = this.urlData + this.entity.GetPath() + "?page=" + page;
             IEnumerable<T> results = new List<T>();
             var helper = new Helper<T>()
@@ -141,6 +159,11 @@ namespace StarWarsApiCSharp
                 }
 
                 helper = JsonConvert.DeserializeObject<Helper<T>>(jsonResponse);
+                if (helper == null)
+                {
+                    return null;
+                }
+
                 results = results.Union(helper.Results);
 
                 if (results.Count() >= size)

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EA213E25-FFC4-4B7D-B671-77EAEA15BCCF}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,6 +11,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWapi-CSharp", "SWapi-CSharp\SWapi-CSharp.csproj", "{CDCDE2C9-059D-4DA4-8B17-1F3142857F6C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{81247013-D0DC-417B-BD04-91FA27B93F80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWapi-CSharpTests", "SWapi-CSharpTests\SWapi-CSharpTests.csproj", "{3DE0C114-BC9E-4729-AF9E-C5CD1DCD028F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{81247013-D0DC-417B-BD04-91FA27B93F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81247013-D0DC-417B-BD04-91FA27B93F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81247013-D0DC-417B-BD04-91FA27B93F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE0C114-BC9E-4729-AF9E-C5CD1DCD028F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE0C114-BC9E-4729-AF9E-C5CD1DCD028F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE0C114-BC9E-4729-AF9E-C5CD1DCD028F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE0C114-BC9E-4729-AF9E-C5CD1DCD028F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

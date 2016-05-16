@@ -116,7 +116,7 @@ namespace StarWarsApiCSharp
         /// Gets the path for extending base URL API.
         /// </summary>
         /// <value>The path.</value>
-        protected override string Path
+        protected override string EntryPath
         {
             get
             {

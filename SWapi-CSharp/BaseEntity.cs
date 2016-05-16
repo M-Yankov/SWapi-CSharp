@@ -42,7 +42,7 @@ namespace StarWarsApiCSharp
         /// <summary>
         /// Gets the path.
         /// </summary>
-        protected abstract string Path { get; }
+        protected abstract string EntryPath { get; }
 
         /// <summary>
         /// Gets the path for extending base URL API.
@@ -50,7 +50,7 @@ namespace StarWarsApiCSharp
         /// <returns>System.String the path.</returns>
         public string GetPath()
         {
-            return this.Path;
+            return this.EntryPath;
         }
     }
 }
