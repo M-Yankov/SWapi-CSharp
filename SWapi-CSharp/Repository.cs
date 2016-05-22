@@ -90,7 +90,7 @@ namespace StarWarsApiCSharp
         /// <example>Data service getting data from JSON document, other database etc.</example>
         public Repository(IDataService dataService, string url)
         {
-            this.entity = Activator.CreateInstance<T>();
+            this.entity = HelperInitializer<T>.Instance();
             this.dataService = dataService;
 
             if (!url.EndsWith(this.urlEndCharacter))

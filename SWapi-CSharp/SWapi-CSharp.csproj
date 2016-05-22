@@ -56,6 +56,7 @@
     <Compile Include="DefaultDataService.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="Helper.cs" />
+    <Compile Include="HelperInitializer.cs" />
     <Compile Include="IDataService.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Person.cs" />
