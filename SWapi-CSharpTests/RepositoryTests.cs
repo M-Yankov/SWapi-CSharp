@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-namespace SWapi_CSharpTests
+﻿namespace SWapi_CSharpTests
 {
     using System;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -8,6 +7,7 @@ namespace SWapi_CSharpTests
     using System.Linq;
     using System.Text;
     using System.Diagnostics;
+
     [TestClass]
     public class RepositoryTests
     {
@@ -258,7 +258,85 @@ namespace SWapi_CSharpTests
                 "Difference : " + (activatorTimer.Ticks / helperTimer.Ticks));
         }
 
-        //// TODO: Get By Id Tests 
+
+        [TestMethod]
+        public void ExpectGetByIdToPassDefaultUrlForGetDataSource()
+        {
+            var mock = new Mock<IDataService>();
+            mock.Setup(x => x.GetDataResult(It.IsAny<string>()))
+                .Returns("{ results: [ ]}");
+
+            var entity = new Planet();
+            int Id = 33;
+            string expectUrl = $"http://swapi.co/api/{ entity.GetPath() }{ Id }";
+
+            var repository = new Repository<Planet>(mock.Object);
+            var result = repository.GetById(Id);
+
+            Assert.IsNotNull(result);
+            Assert.IsInstanceOfType(result, typeof(Planet));
+
+            mock.Verify(c => c.GetDataResult(It.Is<string>(str => str == expectUrl)), Times.AtLeastOnce);
+        }
+
+        [TestMethod]
+        public void ExpectGetByIdToReturnCorrectResult()
+        {
+            string returnedResult = @"{
+      name: ""Luke"",
+      height: ""1.72 m"",
+      mass: ""77 Kg"",
+      hair_color: ""Blond"",
+      skin_color: ""Caucasian"",
+      eye_color: ""Blue"",
+      birth_year: ""19 BBY"",
+      gender: ""Male"",
+      homeworld: ""http://swapi.co/api/planets/1/"",
+      films: [
+          ""http://swapi.co/api/films/1/"",
+          ""http://swapi.co/api/films/2/"",
+          ""http://swapi.co/api/films/3/""
+      ],
+      species: [
+          ""http://swapi.co/api/species/1/""
+      ],
+      vehicles: [
+          ""http://swapi.co/api/vehicles/14/"",
+          ""http://swapi.co/api/vehicles/30/""
+      ],
+      starships: [
+          ""http://swapi.co/api/starships/12/"",
+          ""http://swapi.co/api/starships/22/""
+      ],
+      created: ""2014 -12-09T13:50:51.644000Z"",
+      edited: ""2014 -12-10T13:52:43.172000Z"",
+      url: ""http://swapi.co/api/people/1/""
+}";
+
+            var mock = new Mock<IDataService>();
+            mock.Setup(c => c.GetDataResult(It.IsAny<string>()))
+                .Returns(returnedResult);
+
+            Person luke = new Repository<Person>(mock.Object).GetById(1);
+
+            Assert.AreEqual(luke.Name, "Luke");
+            Assert.AreEqual(luke.Gender, "Male");
+            Assert.AreEqual(luke.Films.Count, 3);
+            Assert.AreEqual(luke.Starships.Count, 2);
+        }
+
+        [TestMethod]
+        public void ExpectToReturnNullValueWhenDataCannotBeFound()
+        {
+            string nullResult = null;
+            var mock = new Mock<IDataService>();
+            mock.Setup(c => c.GetDataResult(It.IsAny<string>()))
+                .Returns(nullResult);
+
+            Film result = new Repository<Film>(mock.Object).GetById(1);
+
+            Assert.IsNull(result);
+        }
         //// TODO: Parse objects test
     }
 }
