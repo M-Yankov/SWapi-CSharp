@@ -16,14 +16,14 @@
             ConsoleColor backgroundColor = ConsoleColor.DarkBlue;
             string template = "Press [Enter] to process with {0} example";
 
-            ProcessExecuteCommand(new FilmsFromFileDemo(), template, "Another service example", backgroundColor);
+            ProcessExecuteCommand(new FilmsFromFileDemo(), template, "Another service", backgroundColor);
 
-            //ProcessExecuteCommand(new FilmsExample(), template, "Films", backgroundColor);
-            //ProcessExecuteCommand(new StarshipsExample(), template, "Starhips", backgroundColor);
-            //ProcessExecuteCommand(new People(), template, "People", backgroundColor);
-            //ProcessExecuteCommand(new Planets(), template, "Planets", backgroundColor);
-            //ProcessExecuteCommand(new Species(), template, "Species", backgroundColor);
-            //ProcessExecuteCommand(new Vehicles(), template, "Vehicles", backgroundColor);
+            ProcessExecuteCommand(new FilmsExample(), template, "Films", backgroundColor);
+            ProcessExecuteCommand(new StarshipsExample(), template, "Starhips", backgroundColor);
+            ProcessExecuteCommand(new PeopleExample(), template, "People", backgroundColor);
+            ProcessExecuteCommand(new PlanetsExample(), template, "Planets", backgroundColor);
+            ProcessExecuteCommand(new SpeciesExample(), template, "Species", backgroundColor);
+            ProcessExecuteCommand(new VehiclesExample(), template, "Vehicles", backgroundColor);
         }
 
         private static void ProcessExecuteCommand(

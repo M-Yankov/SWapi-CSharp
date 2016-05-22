@@ -23,7 +23,7 @@
         {
             int slashIndex = filePath.IndexOf("/");
             filePath = filePath.Substring(0, slashIndex);
-            filePath += "data.json";
+            filePath += "filmsdata.json";
 
             string result = string.Empty;
             using (StreamReader reader = new StreamReader(filePath))
@@ -40,7 +40,7 @@
             string id = filePath.Substring(slashIndex + 1);
 
             filePath = filePath.Substring(0, slashIndex);
-            filePath += "data.json";
+            filePath += "starshipsdata.json";
 
             StringBuilder result = new StringBuilder(); 
             using (StreamReader reader = new StreamReader(filePath))
