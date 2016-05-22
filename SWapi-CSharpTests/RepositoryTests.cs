@@ -7,6 +7,7 @@ namespace SWapi_CSharpTests
     using StarWarsApiCSharp;
     using System.Linq;
     using System.Text;
+    using System.Diagnostics;
     [TestClass]
     public class RepositoryTests
     {
@@ -85,7 +86,7 @@ namespace SWapi_CSharpTests
 
             string expcted = "http://swapi.co/api/people/?page=" + Page;
             mock.Verify(c =>
-                c.GetDataResult(It.Is<string>(url => url == expcted || url == UrlData )),
+                c.GetDataResult(It.Is<string>(url => url == expcted || url == UrlData)),
                 Times.Once());
         }
 
@@ -179,7 +180,7 @@ namespace SWapi_CSharpTests
             var repository = new Repository<Planet>(mock.Object, TestUrl);
             repository.GetEntities();
 
-            string expectedUrl = string.Format("{0}{1}{2}",TestUrl, planetPath, "?page=1");
+            string expectedUrl = string.Format("{0}{1}{2}", TestUrl, planetPath, "?page=1");
 
             mock.Verify(c => c.GetDataResult(It.Is<string>(str => str == expectedUrl)), Times.AtLeastOnce);
         }
@@ -215,6 +216,48 @@ namespace SWapi_CSharpTests
             Assert.AreEqual(UrlForPlanetRepository + "/", planetRepository.Path);
             Assert.AreEqual(UrlForFilmRepository, filmRepository.Path);
         }
+
+        [TestMethod]
+        public void ExpectThreeTimesFasterObjectInitialiingWithHelperInitializerClass()
+        {
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+
+            const int TestsCount = 1000000;
+            for (int i = 0; i < TestsCount; i++)
+            {
+                Activator.CreateInstance<Person>();
+                Activator.CreateInstance<Film>();
+                Activator.CreateInstance<Starship>();
+                Activator.CreateInstance<Vehicle>();
+                Activator.CreateInstance<Planet>();
+                Activator.CreateInstance<Specie>();
+            }
+
+            timer.Stop();
+            var activatorTimer = timer.Elapsed;
+
+            timer.Restart();
+
+            for (int i = 0; i < TestsCount; i++)
+            {
+                HelperInitializer<Person>.Instance();
+                HelperInitializer<Film>.Instance();
+                HelperInitializer<Starship>.Instance();
+                HelperInitializer<Vehicle>.Instance();
+                HelperInitializer<Planet>.Instance();
+                HelperInitializer<Specie>.Instance();
+            }
+
+            timer.Stop();
+            var helperTimer = timer.Elapsed;
+            long expectedTimesDifference = 3;
+
+            Assert.IsTrue(
+                expectedTimesDifference <= (activatorTimer.Ticks / helperTimer.Ticks),
+                "Difference : " + (activatorTimer.Ticks / helperTimer.Ticks));
+        }
+
         //// TODO: Get By Id Tests 
         //// TODO: Parse objects test
     }
