@@ -28,12 +28,6 @@ namespace StarWarsApiCSharp
         /// <value>
         /// The instance.
         /// </value>
-        public static Func<T> Instance
-        {
-            get
-            {
-                return Expression.Lambda<Func<T>>(Expression.New(typeof(T))).Compile();
-            }
-        }
+        public static readonly Func<T> Instance = Expression.Lambda<Func<T>>(Expression.New(typeof(T))).Compile();
     }
 }

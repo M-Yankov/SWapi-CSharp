@@ -23,7 +23,7 @@ namespace StarWarsApiCSharp
     internal class Helper<T> where T : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the results downloaded from http://swapi.co/.
+        /// Gets or sets the results downloaded from http://SWAPI.co/.
         /// </summary>
         /// <value>The results.</value>
         [JsonProperty]
