@@ -23,18 +23,32 @@ namespace StarWarsApiCSharp
     public class DefaultDataService : IDataService
     {
         /// <summary>
+        /// The web helper used for retrieve request and response
+        /// </summary>
+        private IWebHelper webHelper;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DefaultDataService"/> class.
+        /// </summary>
+        /// <param name="webHelper">The web helper.</param>
+        public DefaultDataService(IWebHelper webHelper)
+        {
+            this.webHelper = webHelper;
+        }
+
+        /// <summary>
         /// Gets the result from response helper method.
         /// </summary>
         /// <param name="url">The URL.</param>
         /// <returns>System.String or null if there are error while processing the request.</returns>
         public string GetDataResult(string url)
         {
-            WebRequest request = WebRequest.Create(url);
+            WebRequest request = this.webHelper.GetRequest(url);
             WebResponse response = null;
 
             try
             {
-                response = request.GetResponse();
+                response = this.webHelper.GetResponse(request);
                 string json = string.Empty;
                 using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                 {

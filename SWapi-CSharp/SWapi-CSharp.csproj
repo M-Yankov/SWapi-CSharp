@@ -59,6 +59,7 @@
     <Compile Include="HelperInitializer.cs" />
     <Compile Include="IDataService.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="IWebHelper.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -68,6 +69,7 @@
     <Compile Include="Specie.cs" />
     <Compile Include="Starship.cs" />
     <Compile Include="Vehicle.cs" />
+    <Compile Include="WebHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

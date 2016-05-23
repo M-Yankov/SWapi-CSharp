@@ -68,7 +68,7 @@ namespace StarWarsApiCSharp
         /// Uses the default data service and URL for gather data.
         /// </summary>
         public Repository()
-            : this(new DefaultDataService(), Api)
+            : this(new DefaultDataService(new WebHelper()), Api)
         {
         }
 
