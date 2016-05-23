@@ -30,81 +30,81 @@ namespace StarWarsApiCSharp
         private const string PathToEntity = "films/";
 
         /// <summary>
-        /// Gets the title.
+        /// Gets or sets the title.
         /// </summary>
         /// <value>The title.</value>
         [JsonProperty]
-        public string Title { get; internal set; }
+        public string Title { get; set; }
 
         /// <summary>
-        /// Gets the episode identifier.
+        /// Gets or sets the episode identifier.
         /// </summary>
         /// <value>The episode identifier.</value>
         [JsonProperty(PropertyName = "episode_id")]
-        public string EpisodeId { get; internal set; }
+        public string EpisodeId { get; set; }
 
         /// <summary>
-        /// Gets the opening crawl.
+        /// Gets or sets the opening crawl.
         /// </summary>
         /// <value>The opening crawl.</value>
         [JsonProperty(PropertyName = "opening_crawl")]
-        public string OpeningCrawl { get; internal set; }
+        public string OpeningCrawl { get; set; }
 
         /// <summary>
-        /// Gets the director.
+        /// Gets or sets the director.
         /// </summary>
         /// <value>The director.</value>
         [JsonProperty]
-        public string Director { get; internal set; }
+        public string Director { get; set; }
 
         /// <summary>
-        /// Gets the producer.
+        /// Gets or sets the producer.
         /// </summary>
         /// <value>The producer.</value>
         [JsonProperty]
-        public string Producer { get; internal set; }
+        public string Producer { get; set; }
 
         /// <summary>
-        /// Gets the release date.
+        /// Gets or sets the release date.
         /// </summary>
         /// <value>The release date.</value>
         [JsonProperty(PropertyName = "release_date")]
-        public string ReleaseDate { get; internal set; }
+        public string ReleaseDate { get; set; }
 
         /// <summary>
-        /// Gets the species.
+        /// Gets or sets the species.
         /// </summary>
         /// <value>The species.</value>
         [JsonProperty]
-        public ICollection<string> Species { get; internal set; }
+        public ICollection<string> Species { get; set; }
 
         /// <summary>
-        /// Gets the starships URLs.
+        /// Gets or sets the starships URLs.
         /// </summary>
         /// <value>The starships.</value>
         [JsonProperty]
-        public ICollection<string> Starships { get; internal set; }
+        public ICollection<string> Starships { get; set; }
 
         /// <summary>
-        /// Gets the vehicles URLs.
+        /// Gets or sets the vehicles URLs.
         /// </summary>
         /// <value>The vehicles.</value>
         [JsonProperty]
-        public ICollection<string> Vehicles { get; internal set; }
+        public ICollection<string> Vehicles { get; set; }
 
         /// <summary>
-        /// Gets the characters URLs.
+        /// Gets or sets the characters URLs.
         /// </summary>
         /// <value>The characters.</value>
         [JsonProperty]
-        public ICollection<string> Characters { get; internal set; }
+        public ICollection<string> Characters { get; set; }
 
         /// <summary>
-        /// Gets the planets URLs.
+        /// Gets or sets the planets URLs.
         /// </summary>
         /// <value>The planets.</value>
         [JsonProperty]
-        public ICollection<string> Planets { get; internal set; }
+        public ICollection<string> Planets { get; set; }
 
         /// <summary>
         /// Gets the path for extending base URL API.

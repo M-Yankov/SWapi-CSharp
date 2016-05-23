@@ -28,95 +28,95 @@ namespace StarWarsApiCSharp
         private const string PathToEntity = "people/";
 
         /// <summary>
-        /// Gets the name.
+        /// Gets or sets the name.
         /// </summary>
         /// <value>The name.</value>
         [JsonProperty]
-        public string Name { get; internal set; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// Gets the birth year. It can return "unknown" as value.
+        /// Gets or sets the birth year. It can return "unknown" as value.
         /// </summary>
         /// <value>The birth year.</value>
         [JsonProperty(PropertyName = "birth_year")]
-        public string BirthYear { get; internal set; }
+        public string BirthYear { get; set; }
 
         /// <summary>
-        /// Gets the color of the eye. It can return "unknown" as value.
+        /// Gets or sets the color of the eye. It can return "unknown" as value.
         /// </summary>
         /// <value>The color of the eye.</value>
         [JsonProperty(PropertyName = "eye_color")]
-        public string EyeColor { get; internal set; }
+        public string EyeColor { get; set; }
 
         /// <summary>
-        /// Gets the gender. It can return "n/a" as value
+        /// Gets or sets the gender. It can return "n/a" as value
         /// </summary>
         /// <value>The gender.</value>
         [JsonProperty]
-        public string Gender { get; internal set; }
+        public string Gender { get; set; }
 
         /// <summary>
-        /// Gets the color of the hair. It can return "unknown" as value.
+        /// Gets or sets the color of the hair. It can return "unknown" as value.
         /// </summary>
         /// <value>The color of the hair.</value>
         [JsonProperty(PropertyName = "hair_color")]
-        public string HairColor { get; internal set; }
+        public string HairColor { get; set; }
 
         /// <summary>
-        /// Gets the height. It can return "unknown" as value.
+        /// Gets or sets the height. It can return "unknown" as value.
         /// </summary>
         /// <value>The height.</value>
         [JsonProperty]
-        public string Height { get; internal set; }
+        public string Height { get; set; }
 
         /// <summary>
-        /// Gets the mass. It can return "unknown" as value.
+        /// Gets or sets the mass. It can return "unknown" as value.
         /// </summary>
         /// <value>The mass.</value>
         [JsonProperty]
-        public string Mass { get; internal set; }
+        public string Mass { get; set; }
 
         /// <summary>
-        /// Gets the color of the skin. It can return "unknown" as value.
+        /// Gets or sets the color of the skin. It can return "unknown" as value.
         /// </summary>
         /// <value>The color of the skin.</value>
         [JsonProperty(PropertyName = "skin_color")]
-        public string SkinColor { get; internal set; }
+        public string SkinColor { get; set; }
 
         /// <summary>
-        /// Gets the home world.
+        /// Gets or sets the home world.
         /// </summary>
         /// <value>The home world.</value>
         [JsonProperty]
-        public string Homeworld { get; internal set; }
+        public string Homeworld { get; set; }
 
         /// <summary>
-        /// Gets the films URLs.
+        /// Gets or sets the films URLs.
         /// </summary>
         /// <value>The films.</value>
         [JsonProperty]
-        public ICollection<string> Films { get; internal set; }
+        public ICollection<string> Films { get; set; }
 
         /// <summary>
-        /// Gets the species URLs.
+        /// Gets or sets the species URLs.
         /// </summary>
         /// <value>The species.</value>
         [JsonProperty]
-        public ICollection<string> Species { get; internal set; }
+        public ICollection<string> Species { get; set; }
 
         /// <summary>
-        /// Gets the star ships URLs.
+        /// Gets or sets the star ships URLs.
         /// </summary>
         /// <value>The star ships.</value>
         [JsonProperty]
-        public ICollection<string> Starships { get; internal set; }
+        public ICollection<string> Starships { get; set; }
 
         /// <summary>
-        /// Gets the vehicles URLs.
+        /// Gets or sets the vehicles URLs.
         /// </summary>
         /// <value>The vehicles.</value>
         [JsonProperty]
-        public ICollection<string> Vehicles { get; internal set; }
+        public ICollection<string> Vehicles { get; set; }
 
         /// <summary>
         /// Gets the path for extending base URL API.

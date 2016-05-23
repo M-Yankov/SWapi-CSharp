@@ -28,95 +28,95 @@ namespace StarWarsApiCSharp
         private const string PathToEntity = "vehicles/";
 
         /// <summary>
-        /// Gets the name.
+        /// Gets or sets the name.
         /// </summary>
         /// <value>The name.</value>
         [JsonProperty]
-        public string Name { get; internal set; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// Gets the model.
+        /// Gets or sets the model.
         /// </summary>
         /// <value>The model.</value>
         [JsonProperty]
-        public string Model { get; internal set; }
+        public string Model { get; set; }
 
         /// <summary>
-        /// Gets the vehicle class.
+        /// Gets or sets the vehicle class.
         /// </summary>
         /// <value>The vehicle class.</value>
         [JsonProperty(PropertyName = "vehicle_class")]
-        public string VehicleClass { get; internal set; }
+        public string VehicleClass { get; set; }
 
         /// <summary>
-        /// Gets the manufacturer. It can return "unknown" as value.
+        /// Gets or sets the manufacturer. It can return "unknown" as value.
         /// </summary>
         /// <value>The manufacturer.</value>
         [JsonProperty]
-        public string Manufacturer { get; internal set; }
+        public string Manufacturer { get; set; }
 
         /// <summary>
-        /// Gets the length. It can return "unknown" as value.
+        /// Gets or sets the length. It can return "unknown" as value.
         /// </summary>
         /// <value>The length.</value>
         [JsonProperty]
-        public string Length { get; internal set; }
+        public string Length { get; set; }
 
         /// <summary>
-        /// Gets the cost in credits. It can return "unknown" as value.
+        /// Gets or sets the cost in credits. It can return "unknown" as value.
         /// </summary>
         /// <value>The cost in credits.</value>
         [JsonProperty(PropertyName = "cost_in_credits")]
-        public string CostInCredits { get; internal set; }
+        public string CostInCredits { get; set; }
 
         /// <summary>
-        /// Gets the crew count as string.
+        /// Gets or sets the crew count as string.
         /// </summary>
         /// <value>The crew.</value>
         [JsonProperty]
-        public string Crew { get; internal set; }
+        public string Crew { get; set; }
 
         /// <summary>
-        /// Gets the passengers count as string. It can return "unknown" as value.
+        /// Gets or sets the passengers count as string. It can return "unknown" as value.
         /// </summary>
         /// <value>The passengers.</value>
         [JsonProperty]
-        public string Passengers { get; internal set; }
+        public string Passengers { get; set; }
 
         /// <summary>
-        /// Gets the maximum atmospheric speed integer as string. It can return "unknown" as value.
+        /// Gets or sets the maximum atmospheric speed integer as string. It can return "unknown" as value.
         /// </summary>
         /// <value>The maximum atmospheric speed.</value>
         [JsonProperty(PropertyName = "max_atmosphering_speed")]
-        public string MaxAtmospheringSpeed { get; internal set; }
+        public string MaxAtmospheringSpeed { get; set; }
 
         /// <summary>
-        /// Gets the cargo capacity. It can return "unknown" as value.
+        /// Gets or sets the cargo capacity. It can return "unknown" as value.
         /// </summary>
         /// <value>The cargo capacity.</value>
         [JsonProperty(PropertyName = "cargo_capacity")]
-        public string CargoCapacity { get; internal set; }
+        public string CargoCapacity { get; set; }
 
         /// <summary>
-        /// Gets the consumables period. It can return "unknown" as value.
+        /// Gets or sets the consumables period. It can return "unknown" as value.
         /// </summary>
         /// <value>The consumables.</value>
         [JsonProperty]
-        public string Consumables { get; internal set; }
+        public string Consumables { get; set; }
 
         /// <summary>
-        /// Gets the films URLs.
+        /// Gets or sets the films URLs.
         /// </summary>
         /// <value>The films.</value>
         [JsonProperty]
-        public ICollection<string> Films { get; internal set; }
+        public ICollection<string> Films { get; set; }
 
         /// <summary>
-        /// Gets the pilots URLs.
+        /// Gets or sets the pilots URLs.
         /// </summary>
         /// <value>The pilots.</value>
         [JsonProperty]
-        public ICollection<string> Pilots { get; internal set; }
+        public ICollection<string> Pilots { get; set; }
 
         /// <summary>
         /// Gets the path for extending base URL API.

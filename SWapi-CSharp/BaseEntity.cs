@@ -22,22 +22,22 @@ namespace StarWarsApiCSharp
     public abstract class BaseEntity
     {
         /// <summary>
-        /// Gets the URL from where was downloaded the entity.
+        /// Gets or sets the URL from where was downloaded the entity.
         /// </summary>
         [JsonProperty]
-        public string Url { get; internal set; }
+        public string Url { get; set; }
 
         /// <summary>
-        /// Gets the date of creation of the entity.
+        /// Gets or sets the date of creation of the entity.
         /// </summary>
         [JsonProperty]
-        public DateTime Created { get; internal set; }
+        public DateTime Created { get; set; }
 
         /// <summary>
-        /// Gets the date of last modification.
+        /// Gets or sets the date of last modification.
         /// </summary>
         [JsonProperty]
-        public DateTime Edited { get; internal set; }
+        public DateTime Edited { get; set; }
         
         /// <summary>
         /// Gets the path.
