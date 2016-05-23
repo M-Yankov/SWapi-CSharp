@@ -8,8 +8,8 @@
     {
         public string GetDataResult(string url)
         {
-            // Id - ends with /<id>  -> starshipsdata.json/2
-            // many - end with \?page=<page> -> starshipsdata.json\?page=2
+            //// Id - ends with /<id>  -> starshipsdata.json/2
+            //// many - end with \?page=<page> -> starshipsdata.json\?page=2
 
             if (this.IsUrlContinsId(url))
             {
@@ -53,8 +53,7 @@
                 {
                     string line = reader.ReadLine();
 
-                    if (isInResults && countOfBracets == 0
-                        )
+                    if (isInResults && countOfBracets == 0)
                     {
                         if (isFound)
                         {

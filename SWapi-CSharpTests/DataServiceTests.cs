@@ -1,14 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-namespace SWapi_CSharpTests
+﻿namespace SWapi_CSharpTests
 {
-    using System;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using StarWarsApiCSharp;
-    using Moq;
-    using System.Net;
-    using System.Web;
-    using System.Runtime.Serialization;
     using System.Linq;
+    using System.Net;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Moq;
+    using StarWarsApiCSharp;
 
     [TestClass]
     public class DataServiceTests

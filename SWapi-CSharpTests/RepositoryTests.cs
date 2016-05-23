@@ -1,12 +1,12 @@
 ﻿namespace SWapi_CSharpTests
 {
     using System;
+    using System.Diagnostics;
+    using System.Linq;
+    using System.Text;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
     using StarWarsApiCSharp;
-    using System.Linq;
-    using System.Text;
-    using System.Diagnostics;
 
     [TestClass]
     public class RepositoryTests
@@ -24,7 +24,8 @@
             // verify mock setup.
             const string Expcted = "http://swapi.co/api/starships/?page=1";
 
-            mock.Verify(c =>
+            mock.Verify(
+                c =>
                 c.GetDataResult(It.Is<string>(url => url == Expcted)),
                 Times.Once());
         }
@@ -43,7 +44,8 @@
             Assert.IsNull(nullResult);
 
             string expcted = "http://swapi.co/api/films/?page=" + Page;
-            mock.Verify(c =>
+            mock.Verify(
+                c =>
                 c.GetDataResult(It.Is<string>(url => url == expcted)),
                 Times.Once());
         }
@@ -63,7 +65,8 @@
             Assert.AreEqual(Size, people.Count);
 
             string expcted = "http://swapi.co/api/people/?page=" + Page;
-            mock.Verify(c =>
+            mock.Verify(
+                c =>
                 c.GetDataResult(It.Is<string>(url => url == expcted)),
                 Times.Once());
         }
@@ -85,7 +88,8 @@
             Assert.AreEqual(Size, people.Count);
 
             string expcted = "http://swapi.co/api/people/?page=" + Page;
-            mock.Verify(c =>
+            mock.Verify(
+                c =>
                 c.GetDataResult(It.Is<string>(url => url == expcted || url == UrlData)),
                 Times.Once());
         }
@@ -180,7 +184,7 @@
             var repository = new Repository<Planet>(mock.Object, TestUrl);
             repository.GetEntities();
 
-            string expectedUrl = string.Format("{0}{1}{2}", TestUrl, planetPath, "?page=1");
+            string expectedUrl = $"{ TestUrl }{ planetPath }?page=1";
 
             mock.Verify(c => c.GetDataResult(It.Is<string>(str => str == expectedUrl)), Times.AtLeastOnce);
         }
@@ -197,7 +201,7 @@
             var repository = new Repository<Planet>(mock.Object, TestUrl);
             repository.GetEntities();
 
-            string expectedUrl = string.Format("{0}/{1}{2}", TestUrl, planetPath, "?page=1");
+            string expectedUrl = $"{ TestUrl }/{ planetPath }?page=1";
 
             mock.Verify(c => c.GetDataResult(It.Is<string>(str => str == expectedUrl)), Times.AtLeastOnce);
         }
@@ -258,7 +262,6 @@
                 "Difference : " + (activatorTimer.Ticks / helperTimer.Ticks));
         }
 
-
         [TestMethod]
         public void ExpectGetByIdToPassDefaultUrlForGetDataSource()
         {
@@ -267,7 +270,7 @@
                 .Returns("{ results: [ ]}");
 
             var entity = new Planet();
-            int Id = 33;
+            const int Id = 33;
             string expectUrl = $"http://swapi.co/api/{ entity.GetPath() }{ Id }";
 
             var repository = new Repository<Planet>(mock.Object);

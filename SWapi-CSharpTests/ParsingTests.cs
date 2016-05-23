@@ -1,11 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-namespace SWapi_CSharpTests
+﻿namespace SWapi_CSharpTests
 {
-    using System;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using StarWarsApiCSharp;
-    using Moq;
     using System.Linq;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Moq;
+    using StarWarsApiCSharp;
 
     [TestClass]
     public class ParsingTests
@@ -121,7 +119,7 @@ namespace SWapi_CSharpTests
             Assert.AreEqual(ExpectedFilmsCount, testStarship.Films.Count);
 
             Assert.IsNull(testStarship.MegaLights);
-            testStarship.MegaLights = "";
+            testStarship.MegaLights = string.Empty;
             Assert.IsNotNull(testStarship.MegaLights);
 
             Assert.IsNotNull(testStarship.CargoCapacity);

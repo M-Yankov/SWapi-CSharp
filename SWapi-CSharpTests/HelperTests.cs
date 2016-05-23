@@ -1,11 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-namespace SWapi_CSharpTests
+﻿namespace SWapi_CSharpTests
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using System.Net;
-    using Moq;
-    using StarWarsApiCSharp;
+    using System;
     using System.IO;
+    using System.Net;
+    using System.Reflection;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Moq;
+    using Newtonsoft.Json;
+    using StarWarsApiCSharp;
 
     [TestClass]
     public class HelperTests
@@ -13,9 +15,9 @@ namespace SWapi_CSharpTests
         [TestMethod]
         public void ExpectGettingRequestObjectToWorkCorrect()
         {
-            const string validUrl = "http://testsite.com/";
-            WebRequest request = new WebHelper().GetRequest(validUrl);
-            Assert.AreEqual(validUrl, request.RequestUri.ToString());
+            const string ValidUrl = "http://testsite.com/";
+            WebRequest request = new WebHelper().GetRequest(ValidUrl);
+            Assert.AreEqual(ValidUrl, request.RequestUri.ToString());
         }
 
         [TestMethod]

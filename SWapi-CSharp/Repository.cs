@@ -145,7 +145,8 @@ namespace StarWarsApiCSharp
             IEnumerable<T> results = new List<T>();
             var helper = new Helper<T>()
             {
-                Next = url
+                Next = url,
+                Previous = null,
             };
 
             string jsonResponse = string.Empty;
