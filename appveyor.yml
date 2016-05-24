@@ -1,0 +1,20 @@
+version: 1.0.{build}
+before_build:
+- cmd: nuget restore SWapi-CSharp.sln
+build:
+  project: SWapi-CSharp.sln
+  parallel: true
+  verbosity: minimal
+branches:
+  only:
+    - master
+# build platform, i.e. x86, x64, Any CPU. This setting is optional.
+platform: Any CPU
+
+# to add several platforms to build matrix:
+#platform:
+#  - x86
+#  - Any CPU
+
+# build Configuration, i.e. Debug, Release, etc.
+configuration: Release
