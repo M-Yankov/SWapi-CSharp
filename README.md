@@ -99,6 +99,10 @@ So after you have an instance of one entity type, you can get his base propertie
 ```c#
 Console.WriteLine(person.Created);
 ```
+
+<a href="./Structure.png">
+    <img src="./Structure.png" width="750" />
+</a>
 ### Examples
 
 Using  `Repository<T>` class:
@@ -235,5 +239,9 @@ The repository has two main methods for consume entities:
         */
     ```
 
-All of the examples can be seen in the repository `Example` project.
+All of the examples can be seen in the repository [`Example`](/Example) project.
+
+Full documentation about http://swapi.co/ [Documentation](http://swapi.co/documentation)
+
+If you find a bug or something doesn't working [Submit here](https://github.com/M-Yankov/SWapi-CSharp/issues) 
 
