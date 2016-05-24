@@ -1,2 +1,4 @@
 language: csharp
 solution: solution-name.sln
+install:
+  - nuget restore solution-name.sln
