@@ -1,64 +1,125 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="@10" Category="CodeSchema_Class" Bounds="-123.574753633287,-160.33355688887,96.64,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Person" UseManualLocation="True" />
-    <Node Id="@11" Category="CodeSchema_Class" Bounds="246.859195807863,-164.896855786926,93.8666666666667,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Planet" UseManualLocation="True" />
-    <Node Id="@12" Category="CodeSchema_Class" Bounds="30.5645750996872,-184.384909214849,95.43,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Specie" UseManualLocation="True" />
-    <Node Id="@13" Category="CodeSchema_Class" Bounds="-102.61209156698,-215.33365688887,103.176666666667,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Starship" UseManualLocation="True" />
-    <Node Id="@14" Category="CodeSchema_Class" Bounds="155.994575099688,-219.896955786926,98.39,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Vehicle" UseManualLocation="True" />
-    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="-424.348309544033,-299.897155786926,849.583930164788,271.563466897969" CodeSchemaProperty_StrongName="StarWarsApiCSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="NotFetched" FetchedChildrenCount="1" FilePath="$(cdcde2c9-059d-4da4-8b17-1f3142857f6c.OutputPath)" Group="Expanded" Label="StarWarsApiCSharp.dll" UseManualLocation="True" />
-    <Node Id="@4" Category="CodeSchema_Namespace" Bounds="-404.348309544033,-259.897055786926,809.583930164788,211.563266897969" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="10" Group="Expanded" Label="StarWarsApiCSharp" UseManualLocation="True" />
-    <Node Id="@5" Category="CodeSchema_Class" Bounds="-210.61488354124,-93.3338888889567,118.913333333333,25" CodeSchemaProperty_IsGeneric="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Helper‎&lt;T‎&gt;" />
-    <Node Id="@6" Category="CodeSchema_Interface" Bounds="-384.348309544033,-94.0000879999135,143.163333333333,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsGeneric="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="IRepository‎&lt;T‎&gt;" />
-    <Node Id="@7" Category="CodeSchema_Class" Bounds="-307.544753633287,-151.000187999914,139.97,25" CodeSchemaProperty_IsGeneric="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Repository‎&lt;T‎&gt;" UseManualLocation="True" />
-    <Node Id="@8" Category="CodeSchema_Class" Bounds="55.549463409263,-94.00052,115.063333333333,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="BaseEntity" />
-    <Node Id="@9" Category="CodeSchema_Class" Bounds="302.225620620755,-97.8967557869256,83.01,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Film" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=BirthYear)" Category="CodeSchema_Property" Bounds="-435.435259252576,-431.054696167704,105.399061454048,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="BirthYear" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=EntryPath)" Category="CodeSchema_Property" Bounds="-164.371359969061,-431.054696167704,108.629061454048,25" CodeSchemaProperty_IsVirtual="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="EntryPath" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=EyeColor)" Category="CodeSchema_Property" Bounds="-176.582250635728,-486.043696167704,105.172394787381,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="EyeColor" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=Films)" Category="CodeSchema_Property" Bounds="-86.2193882774853,-596.981504167704,85.5523947873816,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Films" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=Gender)" Category="CodeSchema_Property" Bounds="-191.262647302394,-541.032696167704,97.2657281207148,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Gender" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=HairColor)" Category="CodeSchema_Property" Bounds="-435.435259252576,-376.065696167703,108.725728120715,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="HairColor" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=Height)" Category="CodeSchema_Property" Bounds="-315.313560277485,-541.032696167704,94.0757281207149,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Height" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=Homeworld)" Category="CodeSchema_Property" Bounds="-157.712691969061,-376.065696167703,120.462394787382,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Homeworld" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=Mass)" Category="CodeSchema_Property" Bounds="-201.715345919243,-596.981504167704,85.5190614540483,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Mass" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=Name)" Category="CodeSchema_Property" Bounds="-435.435259252576,-541.032696167704,90.1457281207149,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Name" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=PathToEntity)" Category="CodeSchema_Field" Bounds="-333.815587252576,-596.981504167704,102.126666666667,25.9599999999999" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="PathToEntity" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=SkinColor)" Category="CodeSchema_Property" Bounds="-296.737276277485,-376.065696167703,109.052394787382,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SkinColor" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=Species)" Category="CodeSchema_Property" Bounds="-435.435259252576,-486.043696167704,97.9723947873815,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Species" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=Starships)" Category="CodeSchema_Property" Bounds="-300.063277610819,-431.054696167704,105.719061454048,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Starships" UseManualLocation="True" />
+    <Node Id="(@1 @3 @15 Member=Vehicles)" Category="CodeSchema_Property" Bounds="-307.488458944152,-486.043696167704,100.932394787382,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Vehicles" UseManualLocation="True" />
+    <Node Id="@10" Category="CodeSchema_Class" Bounds="193.943072381689,-138.4616225782,115.063333333333,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="BaseEntity" UseManualLocation="True" />
+    <Node Id="@11" Category="CodeSchema_Class" Bounds="-319.073928036348,-211.692713177404,161.306666666667,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="DefaultDataService" UseManualLocation="True" />
+    <Node Id="@12" Category="CodeSchema_Class" Bounds="96.6024446037334,-225.781470370542,83.0100000000001,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Film" UseManualLocation="True" />
+    <Node Id="@13" Category="CodeSchema_Interface" Bounds="-117.45043963098,-141.332604931253,126.183333333333,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="IDataService" UseManualLocation="True" />
+    <Node Id="@14" Category="CodeSchema_Interface" Bounds="-448.961969462215,-140.947452716138,123.47,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="IWebHelper" UseManualLocation="True" />
+    <Node Id="@16" Category="CodeSchema_Class" Bounds="135.676309992461,-280.781570370542,96.64,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="16" Group="Collapsed" Label="Person" UseManualLocation="True" />
+    <Node Id="@17" Category="CodeSchema_Class" Bounds="294.349147628493,-252.808824886338,93.8666666666666,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Planet" UseManualLocation="True" />
+    <Node Id="@18" Category="CodeSchema_Class" Bounds="44.7887246489946,-170.781370370542,95.43,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Specie" UseManualLocation="True" />
+    <Node Id="@19" Category="CodeSchema_Class" Bounds="282.379033256569,-403.590632487302,103.176666666667,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Starship" UseManualLocation="True" />
+    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="-538.191515062339,-483.590832487302,966.4073293575,410.129409909101" CodeSchemaProperty_StrongName="StarWarsApiCSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" FilePath="$(cdcde2c9-059d-4da4-8b17-1f3142857f6c.OutputPath)" Group="Expanded" Label="StarWarsApiCSharp.dll" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.dll" />
+    </Node>
+    <Node Id="@20" Category="CodeSchema_Class" Bounds="200.013248451036,-348.590532487302,98.3900000000001,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Vehicle" UseManualLocation="True" />
+    <Node Id="@21" Category="CodeSchema_Class" Bounds="-493.574018489577,-200.792217473451,120.276666666667,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="WebHelper" UseManualLocation="True" />
+    <Node Id="@22" Category="CodeSchema_Method" Bounds="-435.435259252576,-596.981504167704,71.64,25.9599999999999" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="Person" UseManualLocation="True" />
+    <Node Id="@4" Category="CodeSchema_Namespace" Bounds="-518.191515062339,-443.590732487302,926.4073293575,350.129209909102" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="15" Group="Expanded" Label="StarWarsApiCSharp" />
+    <Node Id="@6" Category="CodeSchema_Class" Bounds="-490.538665708393,-399.592418176191,118.913333333333,25" CodeSchemaProperty_IsGeneric="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Helper‎&lt;T‎&gt;" UseManualLocation="True" />
+    <Node Id="@7" Category="CodeSchema_Class" Bounds="-498.191515062339,-328.462255499794,166.573333333333,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsGeneric="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="HelperInitializer‎&lt;T‎&gt;" UseManualLocation="True" />
+    <Node Id="@8" Category="CodeSchema_Interface" Bounds="-144.966157968428,-392.325404373551,143.163333333333,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsGeneric="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="IRepository‎&lt;T‎&gt;" UseManualLocation="True" />
+    <Node Id="@9" Category="CodeSchema_Class" Bounds="-341.625332375059,-383.462355499794,139.97,25" CodeSchemaProperty_IsGeneric="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Repository‎&lt;T‎&gt;" UseManualLocation="True" />
   </Nodes>
   <Links>
-    <Link Source="@10" Target="@8" Category="InheritsFrom" Bounds="-39.7641646782047,-135.33355688887,108.394232203101,38.1771039148882" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@11" Target="@13" Category="Implements" Bounds="-205.720634042285,-186.692713177404,109.788143125947,41.9679951090111" Weight="1" />
+    <Link Source="@11" Target="@14" Category="References" Bounds="-352.806149542084,-186.692713177404,88.0929145637762,41.8809758364941" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="4">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@11" Target="@8" Category="InheritsFrom" Bounds="153.786798432697,-139.896855786926,108.14382327361,42.4267691343518" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@12" Target="@10" Category="InheritsFrom" Bounds="154.336185450005,-200.781470370542,73.3835514826897,56.5228320682919" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@12" Target="@8" Category="InheritsFrom" Bounds="83.0925681506106,-159.384909214849,21.7619928174921,56.5188661900226" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@16" Target="(@1 @3 @15 Member=BirthYear)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=EntryPath)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=EyeColor)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=Films)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=Gender)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=HairColor)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=Height)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=Homeworld)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=Mass)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=Name)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=PathToEntity)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=SkinColor)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=Species)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=Starships)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="(@1 @3 @15 Member=Vehicles)" Category="Contains" FetchingParent="@16" />
+    <Link Source="@16" Target="@10" Category="InheritsFrom" Weight="1" />
+    <Link Source="@16" Target="@22" Category="Contains" FetchingParent="@16" />
+    <Link Source="@17" Target="@10" Category="InheritsFrom" Bounds="267.160009404581,-227.808824886338,64.3050317663427,81.8760200418117" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@13" Target="@8" Category="InheritsFrom" Bounds="-34.1173206645879,-190.33365688887,122.65319029355,90.6852713593151" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@18" Target="@10" Category="InheritsFrom" Bounds="139.75349065708,-148.67521338401,46.669154151254,9.48811516080085" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@14" Target="@8" Category="InheritsFrom" Bounds="127.835802144858,-194.896955786926,68.2085135549082,93.2293314111666" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@19" Target="@10" Category="InheritsFrom" Bounds="258.186390573717,-378.590632487302,71.8917077515668,231.057948629986" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
     <Link Source="@2" Target="@4" Category="Contains" FetchingParent="@2" />
+    <Link Source="@20" Target="@10" Category="InheritsFrom" Bounds="249.34307584094,-323.590532487302,1.89437296137251,175.629462485008" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@21" Target="@14" Category="Implements" Bounds="-423.783897760676,-175.792217473451,21.0991408821242,27.3254320901912" Weight="1" />
+    <Link Source="@22" Target="@10" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
     <Link Source="@4" Target="@10" Category="Contains" FetchingParent="@4" />
     <Link Source="@4" Target="@11" Category="Contains" FetchingParent="@4" />
     <Link Source="@4" Target="@12" Category="Contains" FetchingParent="@4" />
     <Link Source="@4" Target="@13" Category="Contains" FetchingParent="@4" />
     <Link Source="@4" Target="@14" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@5" Category="Contains" FetchingParent="@4" />
+    <Link Source="@4" Target="@16" Category="Contains" FetchingParent="@4" />
+    <Link Source="@4" Target="@17" Category="Contains" FetchingParent="@4" />
+    <Link Source="@4" Target="@18" Category="Contains" FetchingParent="@4" />
+    <Link Source="@4" Target="@19" Category="Contains" FetchingParent="@4" />
+    <Link Source="@4" Target="@20" Category="Contains" FetchingParent="@4" />
+    <Link Source="@4" Target="@21" Category="Contains" FetchingParent="@4" />
     <Link Source="@4" Target="@6" Category="Contains" FetchingParent="@4" />
     <Link Source="@4" Target="@7" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@8" Category="Contains" FetchingParent="@4" />
+    <Link Source="@4" Target="@8" Category="Contains" />
     <Link Source="@4" Target="@9" Category="Contains" FetchingParent="@4" />
-    <Link Source="@7" Target="@5" Category="References" Bounds="-218.830977447983,-126.000187999913,41.4581429477142,27.6700827496168" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
+    <Link Source="@9" Target="@10" Category="CodeSchema_Calls" Bounds="-244.95086775666,-358.462355499794,461.585758038799,216.183503790011" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@9" Target="@11" Category="CodeSchema_Calls" Bounds="-269.222869572632,-358.462355499794,26.6759041152087,137.933374240692" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@9" Target="@13" Category="References" Bounds="-260.423125541711,-358.462355499794,188.836178275041,210.43137240017" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="5">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@7" Target="@6" Category="Implements" Bounds="-288.702778018062,-126.000187999913,34.6503144500379,26.2618412825672" Weight="1" />
-    <Link Source="@7" Target="@8" Category="CodeSchema_Calls" Bounds="-169.129819909217,-127.376318295197,216.130319432516,35.1338278698412" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
-    <Link Source="@9" Target="@8" Category="InheritsFrom" Bounds="180.111441596438,-84.69563450565,122.114179024318,2.06280808720504" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@9" Target="@21" Category="CodeSchema_Calls" Bounds="-416.396778827279,-358.462355499794,133.684894573975,150.932877391674" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@9" Target="@6" Category="References" Bounds="-362.671037289975,-380.171560386143,21.0457049149163,2.12910807095528" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="7">
       <Category Ref="CodeSchema_Calls" />
     </Link>
+    <Link Source="@9" Target="@7" Category="CodeSchema_FieldRead" Bounds="-373.942684308254,-358.462355499794,69.7422938558884,26.7744815174702" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@9" Target="@8" Category="Implements" Bounds="-201.655332375059,-376.201063427702,47.1986532979118,2.11002091383637" Weight="1" />
   </Links>
   <Categories>
     <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="Assemblies" />
     <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
     <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Classes" />
+    <Category Id="CodeSchema_Field" Label="Field" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Fields" />
+    <Category Id="CodeSchema_FieldRead" Label="Field Read" BasedOn="CodeSchema_FieldReference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Read By" OutgoingActionLabel="Reads Fields" />
+    <Category Id="CodeSchema_FieldReference" Label="Field Reference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References Fields" />
     <Category Id="CodeSchema_Interface" Label="Interface" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Interface" NavigationActionLabel="Interfaces" />
+    <Category Id="CodeSchema_Member" Label="Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Members" />
+    <Category Id="CodeSchema_Method" Label="Method" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Methods" />
     <Category Id="CodeSchema_Namespace" Label="Namespace" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" NavigationActionLabel="Namespaces" />
+    <Category Id="CodeSchema_Property" Label="Property" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Property" NavigationActionLabel="Properties" />
     <Category Id="CodeSchema_Type" Label="Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Types" />
     <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
     <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
+    <Category Id="FileSystem.Category.FileOfType.dll" BasedOn="CodeSchema_Assembly" CanBeDataDriven="True" IsProviderRoot="False" />
     <Category Id="Implements" Label="Implements" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Implemented by" OutgoingActionLabel="Implements" />
     <Category Id="InheritsFrom" Label="Inherits From" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Inherited By" OutgoingActionLabel="Inherits From" />
     <Category Id="References" Label="References" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
@@ -68,9 +129,15 @@
     <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
     <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsAbstract" Label="Is Abstract" Description="Flag to indicate member is 'Abstract' does not provide a full implementation" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsConstructor" Label="Is Constructor" Description="Flag to indicate the method is a constructor" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsFinal" Label="Is Final" Description="Flag to indicate the member is 'Final' and cannot be derived from" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsGeneric" Label="Is Generic" Description="Flag to indicate the member is 'Generic'" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsInternal" Label="Is Internal" Description="Flag to indicate the method is 'Internal'" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPrivate" Label="Is Private" Description="Flag to indicate the scope is Private" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsPublic" Label="Is Public" Description="Flag to indicate the scope is Public" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsSpecialName" Label="Is Special Name" Description="Flag to indicate the method is treated in a special way by some compilers" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsStatic" Label="Is Static" Description="Flag to indicate the member is a static member" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsVirtual" Label="Is Virtual" Description="Flag to indicate the method can be overridden" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_StrongName" Label="StrongName" Description="StrongName" DataType="System.String" />
     <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
     <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
@@ -86,6 +153,7 @@
     <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
     <Property Id="IsContainment" DataType="System.Boolean" />
     <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
     <Property Id="IsSourceVirtualized" Label="Link Source Virtualized" Description="If true, the link source end contains data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
     <Property Id="IsTargetVirtualized" Label="Link Target Virtualized" Description="If true, the link target end contains data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
     <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
@@ -103,6 +171,7 @@
   <QualifiedNames>
     <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
     <Name Id="GenericParameterCount" Label="Generic Parameter Count" ValueType="System.String" />
+    <Name Id="Member" Label="Member" ValueType="System.Object" />
     <Name Id="Name" Label="Name" ValueType="System.String" />
     <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
     <Name Id="Type" Label="Type" ValueType="System.Object" />
@@ -112,16 +181,24 @@
     <Alias n="2" Id="(@1)" />
     <Alias n="3" Id="Namespace=StarWarsApiCSharp" />
     <Alias n="4" Id="(@1 @3)" />
-    <Alias n="5" Id="(@1 @3 Type=(Name=Helper GenericParameterCount=1))" />
-    <Alias n="6" Id="(@1 @3 Type=(Name=IRepository GenericParameterCount=1))" />
-    <Alias n="7" Id="(@1 @3 Type=(Name=Repository GenericParameterCount=1))" />
-    <Alias n="8" Id="(@1 @3 Type=BaseEntity)" />
-    <Alias n="9" Id="(@1 @3 Type=Film)" />
-    <Alias n="10" Id="(@1 @3 Type=Person)" />
-    <Alias n="11" Id="(@1 @3 Type=Planet)" />
-    <Alias n="12" Id="(@1 @3 Type=Specie)" />
-    <Alias n="13" Id="(@1 @3 Type=Starship)" />
-    <Alias n="14" Id="(@1 @3 Type=Vehicle)" />
+    <Alias n="5" Id="GenericParameterCount=1" />
+    <Alias n="6" Id="(@1 @3 Type=(Name=Helper @5))" />
+    <Alias n="7" Id="(@1 @3 Type=(Name=HelperInitializer @5))" />
+    <Alias n="8" Id="(@1 @3 Type=(Name=IRepository @5))" />
+    <Alias n="9" Id="(@1 @3 Type=(Name=Repository @5))" />
+    <Alias n="10" Id="(@1 @3 Type=BaseEntity)" />
+    <Alias n="11" Id="(@1 @3 Type=DefaultDataService)" />
+    <Alias n="12" Id="(@1 @3 Type=Film)" />
+    <Alias n="13" Id="(@1 @3 Type=IDataService)" />
+    <Alias n="14" Id="(@1 @3 Type=IWebHelper)" />
+    <Alias n="15" Id="Type=Person" />
+    <Alias n="16" Id="(@1 @3 @15)" />
+    <Alias n="17" Id="(@1 @3 Type=Planet)" />
+    <Alias n="18" Id="(@1 @3 Type=Specie)" />
+    <Alias n="19" Id="(@1 @3 Type=Starship)" />
+    <Alias n="20" Id="(@1 @3 Type=Vehicle)" />
+    <Alias n="21" Id="(@1 @3 Type=WebHelper)" />
+    <Alias n="22" Id="(@1 @3 @15 Member=.ctor)" />
   </IdentifierAliases>
   <Styles>
     <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
