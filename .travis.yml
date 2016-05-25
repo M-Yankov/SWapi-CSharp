@@ -2,3 +2,5 @@ language: csharp
 solution: SWapi-CSharp.sln
 install:
   - nuget restore SWapi-CSharp.sln
+script:
+  - xbuild /p:Configuration=Release SWapi-CSharp.sln /p:TargetFrameworkVersion="v4.6"
