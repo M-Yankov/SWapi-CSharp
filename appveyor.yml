@@ -11,7 +11,7 @@ environment:
 branches:
   only:
     - master
-	- CodeCoverage
+    - CodeCoverage
 # build platform, i.e. x86, x64, Any CPU. This setting is optional.
 platform: Any CPU
 
