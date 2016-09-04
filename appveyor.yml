@@ -20,7 +20,7 @@ platform: Any CPU
 configuration: Release
 test_script:
 - ps: >-
-    vstest.console.exe /inIsolation /Enablecodecoverage .\SWapi-CSharp\SWapi-CSharpTests\bin\Release\SWapi-CSharpTests.dll /Settings:CodeCoverage.runsettings
+    vstest.console.exe ".\SWapi-CSharp\SWapi-CSharpTests\bin\Release\SWapi-CSharpTests.dll" /inIsolation /Enablecodecoverage /Settings:CodeCoverage.runsettings
     $coverageFilePath = Resolve-Path -path "TestResults\*\*.coverage"
     $coverageFilePath = $coverageFilePath.ToString()
     if(Test-Path .\coverage.coveragexml){ rm .\coverage.coveragexml }
