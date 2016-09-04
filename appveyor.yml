@@ -1,4 +1,14 @@
 version: 1.0.{build}
+skip_tags: true
+configuration: Release
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+environment:
+  COVERALLS_REPO_TOKEN: hgKah6GZkiWencxCjSyj4sxTSmaWAwLzr
 before_build:
 - cmd: nuget restore SWapi-CSharp.sln
 build:
@@ -8,28 +18,33 @@ build:
 branches:
   only:
     - master
+    - CodeCoverage
 # build platform, i.e. x86, x64, Any CPU. This setting is optional.
 platform: Any CPU
-
-# to add several platforms to build matrix:
-#platform:
-#  - x86
-#  - Any CPU
-
-# build Configuration, i.e. Debug, Release, etc.
-configuration: Release
 test_script:
 - ps: >-
-    vstest.console.exe /inIsolation /Enablecodecoverage .\SWapi-CSharp\SWapi-CSharpTests\bin\Release\SWapi-CSharpTests.dll /Settings:CodeCoverage.runsettings
+    vstest.console.exe /inIsolation /Enablecodecoverage .\SWapi-CSharpTests\bin\Release\SWapi-CSharpTests.dll /Settings:CodeCoverage.runsettings
+
     $coverageFilePath = Resolve-Path -path "TestResults\*\*.coverage"
+
     $coverageFilePath = $coverageFilePath.ToString()
+
     if(Test-Path .\coverage.coveragexml){ rm .\coverage.coveragexml }
+
     ."C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Dynamic Code Coverage Tools\CodeCoverage.exe" analyze /output:coverage.coveragexml "$coverageFilePath"
 
     Push-AppveyorArtifact coverage.coveragexml
 
-    $coveralls = (Resolve-Path "src/packages/coveralls.net.*/tools/csmacnz.coveralls.exe").ToString()
+    $coveralls = (Resolve-Path "packages/coveralls.net.*/tools/csmacnz.coveralls.exe").ToString()
+        
+    & $coveralls --dynamiccodecoverage -i coverage.coveragexml --repoToken $env:COVERALLS_REPO_TOKEN -o cov.json --useRelativePaths
 
-    & $coveralls --dynamiccodecoverage -i coverage.coveragexml --repoToken $env:COVERALLS_REPO_TOKEN --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_JOB_ID --useRelativePaths -o cov.json
+    #comment & $coveralls --dynamiccodecoverage -i coverage.coveragexml --repoToken $env:COVERALLS_REPO_TOKEN --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_JOB_ID --useRelativePaths -o cov.json
+    
+    Write-Host "----------------Log--------------"
+    
+    Write-Host "cov.json exists?"
 
-    Push-AppveyorArtifact cov.json
+    Test-Path .\cov.json
+
+    # Push-AppveyorArtifact .\cov.json
