@@ -1,6 +1,12 @@
 # SWapi-CSharp
 #### Helper library for consuming data from http://swapi.co/
 
+![Build Status](https://ci.appveyor.com/api/projects/status/xoi0pbdwbr1bnti0?svg=true)
+
+### Install
+
+    TODO: descriptions
+
 ### Entities
 
 * `Film`
