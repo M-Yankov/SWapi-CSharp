@@ -5,6 +5,9 @@ build:
   project: SWapi-CSharp.sln
   parallel: true
   verbosity: minimal
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: MVTydgyD1ToMMeDBfAsMmzPFiDmdCqbTO
 branches:
   only:
     - master
@@ -20,7 +23,7 @@ platform: Any CPU
 configuration: Release
 test_script:
 - ps: >-
-    vstest.console.exe ".\SWapi-CSharp\SWapi-CSharpTests\bin\Release\SWapi-CSharpTests.dll" /inIsolation /Enablecodecoverage /Settings:CodeCoverage.runsettings
+    vstest.console.exe /inIsolation /Enablecodecoverage ".\SWapi-CSharp\SWapi-CSharpTests\bin\Release\SWapi-CSharpTests.dll" /Settings:CodeCoverage.runsettings
     $coverageFilePath = Resolve-Path -path "TestResults\*\*.coverage"
     $coverageFilePath = $coverageFilePath.ToString()
     if(Test-Path .\coverage.coveragexml){ rm .\coverage.coveragexml }
