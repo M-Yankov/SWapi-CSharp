@@ -24,7 +24,7 @@ branches:
 platform: Any CPU
 test_script:
 - ps: >-
-    vstest.console.exe /inIsolation /Enablecodecoverage ".\SWapi-CSharp\SWapi-CSharpTests\bin\Release\SWapi-CSharpTests.dll" /Settings:CodeCoverage.runsettings
+    vstest.console.exe /inIsolation /Enablecodecoverage .\SWapi-CSharp\SWapi-CSharpTests\bin\Release\SWapi-CSharpTests.dll /Settings:CodeCoverage.runsettings
 
     $coverageFilePath = Resolve-Path -path "TestResults\*\*.coverage"
 
