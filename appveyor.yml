@@ -8,8 +8,7 @@ assembly_info:
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
 environment:
-  COVERALLS_REPO_TOKEN:
-    secure: hgKah6GZkiWencxCjSyj4sxTSmaWAwLzr
+  COVERALLS_REPO_TOKEN: hgKah6GZkiWencxCjSyj4sxTSmaWAwLzr
 before_build:
 - cmd: nuget restore SWapi-CSharp.sln
 build:
@@ -41,7 +40,7 @@ test_script:
     & $coveralls --dynamiccodecoverage -i coverage.coveragexml --repoToken $env:COVERALLS_REPO_TOKEN -o cov.json --useRelativePaths
 
     #comment & $coveralls --dynamiccodecoverage -i coverage.coveragexml --repoToken $env:COVERALLS_REPO_TOKEN --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_JOB_ID --useRelativePaths -o cov.json
-
+    
     Write-Host "----------------Log--------------"
     
     Write-Host "cov.json exists?"
