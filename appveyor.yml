@@ -1,33 +1,37 @@
 version: 1.0.{build}
+skip_tags: true
+configuration: Release
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: MVTydgyD1ToMMeDBfAsMmzPFiDmdCqbTO
 before_build:
 - cmd: nuget restore SWapi-CSharp.sln
 build:
   project: SWapi-CSharp.sln
   parallel: true
   verbosity: minimal
-environment:
-  COVERALLS_REPO_TOKEN:
-    secure: MVTydgyD1ToMMeDBfAsMmzPFiDmdCqbTO
 branches:
   only:
     - master
     - CodeCoverage
 # build platform, i.e. x86, x64, Any CPU. This setting is optional.
 platform: Any CPU
-
-# to add several platforms to build matrix:
-#platform:
-#  - x86
-#  - Any CPU
-
-# build Configuration, i.e. Debug, Release, etc.
-configuration: Release
 test_script:
 - ps: >-
     vstest.console.exe /inIsolation /Enablecodecoverage ".\SWapi-CSharp\SWapi-CSharpTests\bin\Release\SWapi-CSharpTests.dll" /Settings:CodeCoverage.runsettings
+
     $coverageFilePath = Resolve-Path -path "TestResults\*\*.coverage"
+
     $coverageFilePath = $coverageFilePath.ToString()
+
     if(Test-Path .\coverage.coveragexml){ rm .\coverage.coveragexml }
+
     ."C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Dynamic Code Coverage Tools\CodeCoverage.exe" analyze /output:coverage.coveragexml "$coverageFilePath"
 
     Push-AppveyorArtifact coverage.coveragexml
