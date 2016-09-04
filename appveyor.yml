@@ -9,7 +9,7 @@ assembly_info:
   assembly_informational_version: '{version}'
 environment:
   COVERALLS_REPO_TOKEN:
-    secure: MVTydgyD1ToMMeDBfAsMmzPFiDmdCqbTO
+    secure: hgKah6GZkiWencxCjSyj4sxTSmaWAwLzr
 before_build:
 - cmd: nuget restore SWapi-CSharp.sln
 build:
