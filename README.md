@@ -6,7 +6,9 @@
 
 ### Install
 
-    TODO: descriptions
+* Install from [Nuget](https://www.nuget.org/packages/SWapiCSharp/) using the command in package manager console:
+
+    PM> `Install-Package SWapiCSharp`
 
 ### Entities
 
