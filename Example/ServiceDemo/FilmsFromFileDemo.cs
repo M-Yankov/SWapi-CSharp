@@ -13,7 +13,15 @@
             var service = new JsonFileService();
             var path = Assembly.GetExecutingAssembly().Location;
             path = Path.GetDirectoryName(path);
-            path = path.Replace(@"\bin", string.Empty).Replace(@"Debug", string.Empty);
+
+            var d = new DirectoryInfo(path);
+
+            while (!d.FullName.EndsWith("Example"))
+            {
+                d = d.Parent;
+            }
+
+            path = $"{d.FullName}\\";
 
             var filmsRepository = new Repository<Film>(service, path);
             var filmsFromFile = filmsRepository.GetEntities().ToList();
