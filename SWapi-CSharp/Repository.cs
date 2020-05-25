@@ -30,7 +30,7 @@ namespace StarWarsApiCSharp
         /// <summary>
         /// The default API URL from where entities are downloaded.
         /// </summary>
-        private const string Api = "http://swapi.co/api/";
+        private const string Api = "https://swapi.dev/api/";
 
         /// <summary>
         /// The default page.
@@ -64,7 +64,7 @@ namespace StarWarsApiCSharp
         private T entity;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Repository{T}" /> class. 
+        /// Initializes a new instance of the <see cref="Repository{T}" /> class.
         /// Uses the default data service and URL for gather data.
         /// </summary>
         public Repository()
@@ -122,7 +122,7 @@ namespace StarWarsApiCSharp
         {
             // TODO: override-able GetPath Method ??
             // TODO: separate UrlBuilderClass
-            string url = this.urlData + this.entity.GetPath() + id;
+            string url = $"{this.urlData}{this.entity.GetPath()}{id}/";
             string jsonResponse = this.dataService.GetDataResult(url);
             if (jsonResponse == null)
             {
