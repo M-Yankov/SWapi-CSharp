@@ -14,14 +14,13 @@
             var path = Assembly.GetExecutingAssembly().Location;
             path = Path.GetDirectoryName(path);
 
-            var d = new DirectoryInfo(path);
-
-            while (!d.FullName.EndsWith("Example"))
+            DirectoryInfo directory = new DirectoryInfo(path);
+            while (!directory.FullName.EndsWith("Example"))
             {
-                d = d.Parent;
+                directory = directory.Parent;
             }
 
-            path = $"{d.FullName}\\";
+            path = $"{directory.FullName}\\";
 
             var filmsRepository = new Repository<Film>(service, path);
             var filmsFromFile = filmsRepository.GetEntities().ToList();
