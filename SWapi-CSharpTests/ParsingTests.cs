@@ -31,9 +31,9 @@
           ""http://{ testUrl }/film/7/""
       ],
       species: [
-          ""http://{ testUrl }/species/156/""
-          ""http://{ testUrl }/species/114/""
-          ""http://{ testUrl }/species/1124/""
+          ""http://{ testUrl }/species/156/"",
+          ""http://{ testUrl }/species/114/"",
+          ""http://{ testUrl }/species/1124/"",
           ""http://{ testUrl }/species/1624/""
       ],
       vehicles: [

@@ -4,7 +4,7 @@
 // Created          : 02-06-2016
 //
 // Last Modified By : M.Yankov
-// Last Modified On : 03-17-2016
+// Last Modified On : 05-25-2020
 // ***********************************************************************
 // <copyright file="Repository.cs" company="M-Yankov">
 //     Copyright ©  2016
@@ -13,11 +13,8 @@
 // ***********************************************************************
 namespace StarWarsApiCSharp
 {
-    using System;
     using System.Collections.Generic;
-    using System.IO;
     using System.Linq;
-    using System.Net;
     using Newtonsoft.Json;
 
     /// <summary>
@@ -120,9 +117,7 @@ namespace StarWarsApiCSharp
         /// <returns><see cref="StarWarsApiCSharp.IRepository{T}" /></returns>
         public T GetById(int id)
         {
-            // TODO: override-able GetPath Method ??
-            // TODO: separate UrlBuilderClass
-            string url = $"{this.urlData}{this.entity.GetPath()}{id}/";
+            string url = $"{this.urlData}{this.entity.GetPath()}{id}";
             string jsonResponse = this.dataService.GetDataResult(url);
             if (jsonResponse == null)
             {
@@ -140,7 +135,6 @@ namespace StarWarsApiCSharp
         /// <returns>ICollection&lt; <see cref="StarWarsApiCSharp.IRepository{T}" /> &gt;.</returns>
         public ICollection<T> GetEntities(int page = DefaultPage, int size = DefaultSize)
         {
-            // TODO: separate UrlBuilderClass
             string url = this.urlData + this.entity.GetPath() + "?page=" + page;
             IEnumerable<T> results = new List<T>();
             var helper = new Helper<T>()

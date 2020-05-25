@@ -4,6 +4,7 @@
     using System.Diagnostics;
     using System.Linq;
     using System.Text;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
     using StarWarsApiCSharp;
@@ -21,8 +22,7 @@
             var nullResult = starshipsRepository.GetEntities();
             Assert.IsNull(nullResult);
 
-            // verify mock setup.
-            const string Expcted = "http://swapi.co/api/starships/?page=1";
+            const string Expcted = "https://swapi.dev/api/starships/?page=1";
 
             mock.Verify(
                 c =>
@@ -43,7 +43,7 @@
             var nullResult = filmsRepository.GetEntities(Page);
             Assert.IsNull(nullResult);
 
-            string expcted = "http://swapi.co/api/films/?page=" + Page;
+            string expcted = "https://swapi.dev/api/films/?page=" + Page;
             mock.Verify(
                 c =>
                 c.GetDataResult(It.Is<string>(url => url == expcted)),
@@ -64,7 +64,7 @@
             var people = peopleRepository.GetEntities(Page, Size);
             Assert.AreEqual(Size, people.Count);
 
-            string expcted = "http://swapi.co/api/people/?page=" + Page;
+            string expcted = "https://swapi.dev/api/people/?page=" + Page;
             mock.Verify(
                 c =>
                 c.GetDataResult(It.Is<string>(url => url == expcted)),
@@ -87,7 +87,7 @@
             var people = speciesRepository.GetEntities(Page, Size);
             Assert.AreEqual(Size, people.Count);
 
-            string expcted = "http://swapi.co/api/people/?page=" + Page;
+            string expcted = "https://swapi.dev/api/people/?page=" + Page;
             mock.Verify(
                 c =>
                 c.GetDataResult(It.Is<string>(url => url == expcted || url == UrlData)),
@@ -109,7 +109,7 @@
             }
 
             var urlDataFieldValue = urlDataField.GetValue(repository);
-            const string Expected = "http://swapi.co/api/";
+            const string Expected = "https://swapi.dev/api/";
             Assert.AreEqual(Expected, urlDataFieldValue);
 
             var dataServiceField = privateFields.FirstOrDefault(f => f.Name == "dataService");
@@ -271,7 +271,7 @@
 
             var entity = new Planet();
             const int Id = 33;
-            string expectUrl = $"http://swapi.co/api/{ entity.GetPath() }{ Id }";
+            string expectUrl = $"https://swapi.dev/api/{ entity.GetPath() }{ Id }";
 
             var repository = new Repository<Planet>(mock.Object);
             var result = repository.GetById(Id);
@@ -294,26 +294,26 @@
       eye_color: ""Blue"",
       birth_year: ""19 BBY"",
       gender: ""Male"",
-      homeworld: ""http://swapi.co/api/planets/1/"",
+      homeworld: ""https://test-domain.com/api/planets/1/"",
       films: [
-          ""http://swapi.co/api/films/1/"",
-          ""http://swapi.co/api/films/2/"",
-          ""http://swapi.co/api/films/3/""
+          ""https://test-domain.com/api/films/1/"",
+          ""https://test-domain.com/api/films/2/"",
+          ""https://test-domain.com/api/films/3/""
       ],
       species: [
-          ""http://swapi.co/api/species/1/""
+          ""https://test-domain.com/api/species/1/""
       ],
       vehicles: [
-          ""http://swapi.co/api/vehicles/14/"",
-          ""http://swapi.co/api/vehicles/30/""
+          ""https://test-domain.com/api/vehicles/14/"",
+          ""https://test-domain.com/api/vehicles/30/""
       ],
       starships: [
-          ""http://swapi.co/api/starships/12/"",
-          ""http://swapi.co/api/starships/22/""
+          ""https://test-domain.com/api/starships/12/"",
+          ""https://test-domain.com/api/starships/22/""
       ],
       created: ""2014 -12-09T13:50:51.644000Z"",
       edited: ""2014 -12-10T13:52:43.172000Z"",
-      url: ""http://swapi.co/api/people/1/""
+      url: ""https://test-domain.com/api/people/1/""
 }";
 
             var mock = new Mock<IDataService>();
@@ -340,6 +340,5 @@
 
             Assert.IsNull(result);
         }
-        //// TODO: Parse objects test
     }
 }
