@@ -9,7 +9,7 @@
 
             <ModulePaths>
               <Include>
-                <ModulePath>.*SWapi-CSharpTests.dll</ModulePath>
+                <ModulePath>.*SWapiCSharp.dll</ModulePath>
               </Include>
             </ModulePaths>
 
