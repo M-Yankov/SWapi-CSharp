@@ -18,13 +18,13 @@
       "starship_class": "Star Destroyer",
       "pilots": [ ],
       "films": [
-        "http://swapi.co/api/films/3/",
-        "http://swapi.co/api/films/2/",
-        "http://swapi.co/api/films/1/"
+        "https://swapi.dev/api/films/3/",
+        "https://swapi.dev/api/films/2/",
+        "https://swapi.dev/api/films/1/"
       ],
       "created": "2014-12-10T15:08:19.848000Z",
       "edited": "2014-12-22T17:35:44.410941Z",
-      "url": "http://swapi.co/api/starships/3/"
+      "url": "https://swapi.dev/api/starships/3/"
     },
     {
       "name": "Test Starship",
@@ -42,13 +42,13 @@
       "starship_class": "Test class",
       "pilots": [ ],
       "films": [
-        "http://swapi.co/api/films/3/",
-        "http://swapi.co/api/films/2/",
-        "http://swapi.co/api/films/1/"
+        "https://swapi.dev/api/films/3/",
+        "https://swapi.dev/api/films/2/",
+        "https://swapi.dev/api/films/1/"
       ],
       "created": "2014-12-10T15:08:19.848000Z",
       "edited": "2014-12-22T17:35:44.410941Z",
-      "url": "http://swapi.co/api/starships/999/"
+      "url": "https://swapi.dev/api/starships/999/"
     },
     {
       "name": "Copy of test starship",
@@ -66,13 +66,13 @@
       "starship_class": "test",
       "pilots": [ ],
       "films": [
-        "http://swapi.co/api/films/3/",
-        "http://swapi.co/api/films/2/",
-        "http://swapi.co/api/films/1/"
+        "https://swapi.dev/api/films/3/",
+        "https://swapi.dev/api/films/2/",
+        "https://swapi.dev/api/films/1/"
       ],
       "created": "2014-12-10T15:08:19.848000Z",
       "edited": "2014-12-22T17:35:44.410941Z",
-      "url": "http://swapi.co/api/starships/133/"
+      "url": "https://swapi.dev/api/starships/133/"
     }
   ],
   "count": 1

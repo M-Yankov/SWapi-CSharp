@@ -31,7 +31,7 @@
         //// Helper method for extract id from URL.
         private int GetFilmId(string filmUrl)
         {
-            //// filmUrl = http://swapi.co/api/films/<Id>/
+            //// filmUrl = https://swapi.dev/api/films/<Id>/
 
             //// TODO: will not work if the Id has two digits.
 

@@ -7,7 +7,7 @@
 // Last Modified On : 05-25-2020
 // ***********************************************************************
 // <copyright file="Repository.cs" company="M-Yankov">
-//     Copyright ©  2016
+//     Copyright ©  2020
 // </copyright>
 // <summary>Contains generic repository class.</summary>
 // ***********************************************************************

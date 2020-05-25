@@ -98,13 +98,13 @@
 	starship_class: ""corvette"",
 	pilots: [],
 	films: [
-		""http://swapi.co/api/films/6/"",
-		""http://swapi.co/api/films/3/"",
-		""http://swapi.co/api/films/1/""
+		""https://swapi.dev/api/films/6/"",
+		""https://swapi.dev/api/films/3/"",
+		""https://swapi.dev/api/films/1/""
 	],
 	created: ""2014-12-10T14:20:33.369000Z"",
 	edited: ""2014-12-22T17:35:45.408368Z"",
-	url: ""http://swapi.co/api/starships/2/""
+	url: ""https://swapi.dev/api/starships/2/""
 }}";
 
             var mock = new Mock<IDataService>();
@@ -152,17 +152,17 @@
 	surface_water: ""40"",
 	population: ""2000000000"",
 	residents: [
-		""http://swapi.co/api/people/5/"",
-		""http://swapi.co/api/people/68/"",
-		""http://swapi.co/api/people/81/""
+		""https://swapi.dev/api/people/5/"",
+		""https://swapi.dev/api/people/68/"",
+		""https://swapi.dev/api/people/81/""
 	],
 	films: [
-		""http://swapi.co/api/films/6/"",
-		""http://swapi.co/api/films/1/""
+		""https://swapi.dev/api/films/6/"",
+		""https://swapi.dev/api/films/1/""
 	],
 	created: ""2014-12-10T11:35:48.479000Z"",
 	edited: ""2014-12-20T20:58:18.420000Z"",
-	url: ""http://swapi.co/api/planets/2/""
+	url: ""https://swapi.dev/api/planets/2/""
 }}";
 
             var mock = new Mock<IDataService>();
@@ -197,24 +197,24 @@
 	homeworld: ""someTestWorld"",
 	language: ""n/a"",
 	people: [
-		""http://swapi.co/api/people/2/"",
-		""http://swapi.co/api/people/3/"",
-		""http://swapi.co/api/people/8/"",
-		""http://swapi.co/api/people/23/"",
-		""http://swapi.co/api/people/87/""
+		""https://swapi.dev/api/people/2/"",
+		""https://swapi.dev/api/people/3/"",
+		""https://swapi.dev/api/people/8/"",
+		""https://swapi.dev/api/people/23/"",
+		""https://swapi.dev/api/people/87/""
 	],
 	films: [
-		""http://swapi.co/api/films/7/"",
-		""http://swapi.co/api/films/5/"",
-		""http://swapi.co/api/films/4/"",
-		""http://swapi.co/api/films/6/"",
-		""http://swapi.co/api/films/3/"",
-		""http://swapi.co/api/films/2/"",
-		""http://swapi.co/api/films/1/""
+		""https://swapi.dev/api/films/7/"",
+		""https://swapi.dev/api/films/5/"",
+		""https://swapi.dev/api/films/4/"",
+		""https://swapi.dev/api/films/6/"",
+		""https://swapi.dev/api/films/3/"",
+		""https://swapi.dev/api/films/2/"",
+		""https://swapi.dev/api/films/1/""
 	],
 	created: ""2014-12-10T15:16:16.259000Z"",
 	edited: ""2015-04-17T06:59:43.869528Z"",
-	url: ""http://swapi.co/api/species/2/""
+	url: ""https://swapi.dev/api/species/2/""
 }}";
 
             var mock = new Mock<IDataService>();
@@ -251,12 +251,12 @@
 	vehicle_class: ""wheeled"",
 	pilots: [],
 	films: [
-		""http://swapi.co/api/films/5/"",
-		""http://swapi.co/api/films/1/""
+		""https://swapi.dev/api/films/5/"",
+		""https://swapi.dev/api/films/1/""
 	],
 	created: ""2014-12-10T15:36:25.724000Z"",
 	edited: ""2014-12-22T18:21:15.523587Z"",
-	url: ""http://swapi.co/api/vehicles/4/""
+	url: ""https://swapi.dev/api/vehicles/4/""
 }}";
 
             var mock = new Mock<IDataService>();
@@ -293,7 +293,7 @@
 	species: [],
 	created: ""2014-12-18T10:39:33.255000Z"",
 	edited: ""2015-04-11T09:46:05.220365Z"",
-	url: ""http://swapi.co/api/films/3/""
+	url: ""https://swapi.dev/api/films/3/""
 }}";
             var mock = new Mock<IDataService>();
             mock.Setup(c => c.GetDataResult(It.IsAny<string>()))

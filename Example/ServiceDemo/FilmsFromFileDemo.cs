@@ -52,7 +52,7 @@
 
         private int GetFilmId(string filmUrl)
         {
-            //// filmUrl = http://swapi.co/api/starships/<Id>/
+            //// filmUrl = https://swapi.dev/api/starships/<Id>/
 
             int secondSlash = filmUrl.LastIndexOf("/");
             int firstSlash = filmUrl.LastIndexOf("/", secondSlash - 1);
