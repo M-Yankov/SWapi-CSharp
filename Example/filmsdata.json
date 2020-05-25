@@ -11,13 +11,13 @@
       "producer": "Gary Kurtz, Rick McCallum",
       "release_date": "1977-05-25",
       "characters": [
-        "http://swapi.co/api/people/1/",
-        "http://swapi.co/api/people/2/"
+        "https://swapi.dev/api/people/1/",
+        "https://swapi.dev/api/people/2/"
       ],
       "planets": [
-        "http://swapi.co/api/planets/2/",
-        "http://swapi.co/api/planets/3/",
-        "http://swapi.co/api/planets/1/"
+        "https://swapi.dev/api/planets/2/",
+        "https://swapi.dev/api/planets/3/",
+        "https://swapi.dev/api/planets/1/"
       ],
       "starships": [
         "starshipdata.json/133/",
@@ -25,15 +25,15 @@
         "starshipdata.json/13/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/4/"
+        "https://swapi.dev/api/vehicles/4/"
       ],
       "species": [
-        "http://swapi.co/api/species/4/",
-        "http://swapi.co/api/species/1/"
+        "https://swapi.dev/api/species/4/",
+        "https://swapi.dev/api/species/1/"
       ],
       "created": "2014-12-10T14:23:31.880000Z",
       "edited": "2015-04-11T09:46:52.774897Z",
-      "url": "http://swapi.co/api/films/1/"
+      "url": "https://swapi.dev/api/films/1/"
     },
     {
       "title": "Attack of the Clones",
@@ -43,16 +43,16 @@
       "producer": "Rick McCallum",
       "release_date": "2002-05-16",
       "characters": [
-        "http://swapi.co/api/people/2/",
-        "http://swapi.co/api/people/3/",
-        "http://swapi.co/api/people/6/",
-        "http://swapi.co/api/people/77/",
-        "http://swapi.co/api/people/78/",
-        "http://swapi.co/api/people/82/"
+        "https://swapi.dev/api/people/2/",
+        "https://swapi.dev/api/people/3/",
+        "https://swapi.dev/api/people/6/",
+        "https://swapi.dev/api/people/77/",
+        "https://swapi.dev/api/people/78/",
+        "https://swapi.dev/api/people/82/"
       ],
       "planets": [
-        "http://swapi.co/api/planets/8/",
-        "http://swapi.co/api/planets/1/"
+        "https://swapi.dev/api/planets/8/",
+        "https://swapi.dev/api/planets/1/"
       ],
       "starships": [
         "starshipdata.json/133/",
@@ -61,16 +61,16 @@
         "starshipdata.json/58/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/4/",
-        "http://swapi.co/api/vehicles/57/"
+        "https://swapi.dev/api/vehicles/4/",
+        "https://swapi.dev/api/vehicles/57/"
       ],
       "species": [
-        "http://swapi.co/api/species/6/",
-        "http://swapi.co/api/species/1/"
+        "https://swapi.dev/api/species/6/",
+        "https://swapi.dev/api/species/1/"
       ],
       "created": "2014-12-20T10:57:57.886000Z",
       "edited": "2015-04-11T09:45:01.623982Z",
-      "url": "http://swapi.co/api/films/5/"
+      "url": "https://swapi.dev/api/films/5/"
     },
     {
       "title": "The Phantom Menace",
@@ -80,15 +80,15 @@
       "producer": "Rick McCallum",
       "release_date": "1999-05-19",
       "characters": [
-        "http://swapi.co/api/people/2/",
-        "http://swapi.co/api/people/3/",
-        "http://swapi.co/api/people/58/",
-        "http://swapi.co/api/people/59/"
+        "https://swapi.dev/api/people/2/",
+        "https://swapi.dev/api/people/3/",
+        "https://swapi.dev/api/people/58/",
+        "https://swapi.dev/api/people/59/"
       ],
       "planets": [
-        "http://swapi.co/api/planets/8/",
-        "http://swapi.co/api/planets/9/",
-        "http://swapi.co/api/planets/1/"
+        "https://swapi.dev/api/planets/8/",
+        "https://swapi.dev/api/planets/9/",
+        "https://swapi.dev/api/planets/1/"
       ],
       "starships": [
         "starshipdata.json/999/",
@@ -98,19 +98,19 @@
         "starshipdata.json/39/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/33/",
-        "http://swapi.co/api/vehicles/42/"
+        "https://swapi.dev/api/vehicles/33/",
+        "https://swapi.dev/api/vehicles/42/"
       ],
       "species": [
-        "http://swapi.co/api/species/6/",
-        "http://swapi.co/api/species/11/",
-        "http://swapi.co/api/species/12/",
-        "http://swapi.co/api/species/2/",
-        "http://swapi.co/api/species/1/"
+        "https://swapi.dev/api/species/6/",
+        "https://swapi.dev/api/species/11/",
+        "https://swapi.dev/api/species/12/",
+        "https://swapi.dev/api/species/2/",
+        "https://swapi.dev/api/species/1/"
       ],
       "created": "2014-12-19T16:52:55.740000Z",
       "edited": "2015-04-11T09:45:18.689301Z",
-      "url": "http://swapi.co/api/films/4/"
+      "url": "https://swapi.dev/api/films/4/"
     },
     {
       "title": "Revenge of the Sith",
@@ -120,14 +120,14 @@
       "producer": "Rick McCallum",
       "release_date": "2005-05-19",
       "characters": [
-        "http://swapi.co/api/people/1/",
-        "http://swapi.co/api/people/2/",
-        "http://swapi.co/api/people/3/",
-        "http://swapi.co/api/people/83/"
+        "https://swapi.dev/api/people/1/",
+        "https://swapi.dev/api/people/2/",
+        "https://swapi.dev/api/people/3/",
+        "https://swapi.dev/api/people/83/"
       ],
       "planets": [
-        "http://swapi.co/api/planets/2/",
-        "http://swapi.co/api/planets/1/"
+        "https://swapi.dev/api/planets/2/",
+        "https://swapi.dev/api/planets/1/"
       ],
       "starships": [
         "starshipdata.json/3/",
@@ -136,16 +136,16 @@
         "starshipdata.json/2/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/33/",
-        "http://swapi.co/api/vehicles/56/"
+        "https://swapi.dev/api/vehicles/33/",
+        "https://swapi.dev/api/vehicles/56/"
       ],
       "species": [
-        "http://swapi.co/api/species/6/",
-        "http://swapi.co/api/species/1/"
+        "https://swapi.dev/api/species/6/",
+        "https://swapi.dev/api/species/1/"
       ],
       "created": "2014-12-20T18:49:38.403000Z",
       "edited": "2015-04-11T09:45:44.862122Z",
-      "url": "http://swapi.co/api/films/6/"
+      "url": "https://swapi.dev/api/films/6/"
     },
     {
       "title": "Return of the Jedi",
@@ -155,12 +155,12 @@
       "producer": "Howard G. Kazanjian, George Lucas, Rick McCallum",
       "release_date": "1983-05-25",
       "characters": [
-        "http://swapi.co/api/people/1/",
-        "http://swapi.co/api/people/31/"
+        "https://swapi.dev/api/people/1/",
+        "https://swapi.dev/api/people/31/"
       ],
       "planets": [
-        "http://swapi.co/api/planets/5/",
-        "http://swapi.co/api/planets/1/"
+        "https://swapi.dev/api/planets/5/",
+        "https://swapi.dev/api/planets/1/"
       ],
       "starships": [
         "starshipdata.json/10/",
@@ -175,16 +175,16 @@
         "starshipdata.json/2/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/8/",
-        "http://swapi.co/api/vehicles/30/"
+        "https://swapi.dev/api/vehicles/8/",
+        "https://swapi.dev/api/vehicles/30/"
       ],
       "species": [
-        "http://swapi.co/api/species/5/",
-        "http://swapi.co/api/species/1/"
+        "https://swapi.dev/api/species/5/",
+        "https://swapi.dev/api/species/1/"
       ],
       "created": "2014-12-18T10:39:33.255000Z",
       "edited": "2015-04-11T09:46:05.220365Z",
-      "url": "http://swapi.co/api/films/3/"
+      "url": "https://swapi.dev/api/films/3/"
     },
     {
       "title": "The Empire Strikes Back",
@@ -194,31 +194,31 @@
       "producer": "Gary Kutz, Rick McCallum",
       "release_date": "1980-05-17",
       "characters": [
-        "http://swapi.co/api/people/1/",
-        "http://swapi.co/api/people/26/"
+        "https://swapi.dev/api/people/1/",
+        "https://swapi.dev/api/people/26/"
       ],
       "planets": [
-        "http://swapi.co/api/planets/4/",
-        "http://swapi.co/api/planets/5/",
-        "http://swapi.co/api/planets/6/",
-        "http://swapi.co/api/planets/27/"
+        "https://swapi.dev/api/planets/4/",
+        "https://swapi.dev/api/planets/5/",
+        "https://swapi.dev/api/planets/6/",
+        "https://swapi.dev/api/planets/27/"
       ],
       "starships": [
         "starshipdata.json/3/",
         "starshipdata.json/999/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/8/",
-        "http://swapi.co/api/vehicles/14/",
-        "http://swapi.co/api/vehicles/20/"
+        "https://swapi.dev/api/vehicles/8/",
+        "https://swapi.dev/api/vehicles/14/",
+        "https://swapi.dev/api/vehicles/20/"
       ],
       "species": [
-        "http://swapi.co/api/species/6/",
-        "http://swapi.co/api/species/1/"
+        "https://swapi.dev/api/species/6/",
+        "https://swapi.dev/api/species/1/"
       ],
       "created": "2014-12-12T11:26:24.656000Z",
       "edited": "2015-04-11T09:46:31.433607Z",
-      "url": "http://swapi.co/api/films/2/"
+      "url": "https://swapi.dev/api/films/2/"
     },
     {
       "title": "The Force Awakens",
@@ -228,11 +228,11 @@
       "producer": "Kathleen Kennedy, J. J. Abrams, Bryan Burk",
       "release_date": "2015-12-11",
       "characters": [
-        "http://swapi.co/api/people/1/",
-        "http://swapi.co/api/people/88/"
+        "https://swapi.dev/api/people/1/",
+        "https://swapi.dev/api/people/88/"
       ],
       "planets": [
-        "http://swapi.co/api/planets/61/"
+        "https://swapi.dev/api/planets/61/"
       ],
       "starships": [
         "starshipdata.json/77/",
@@ -240,13 +240,13 @@
       ],
       "vehicles": [ ],
       "species": [
-        "http://swapi.co/api/species/1/",
-        "http://swapi.co/api/species/2/",
-        "http://swapi.co/api/species/3/"
+        "https://swapi.dev/api/species/1/",
+        "https://swapi.dev/api/species/2/",
+        "https://swapi.dev/api/species/3/"
       ],
       "created": "2015-04-17T06:51:30.504780Z",
       "edited": "2015-12-17T14:31:47.617768Z",
-      "url": "http://swapi.co/api/films/7/"
+      "url": "https://swapi.dev/api/films/7/"
     },
     {
       "title": "Film from JSON file",
@@ -262,7 +262,7 @@
       "species": [ ],
       "created": "2016-04-01T06:51:30.504780Z",
       "edited": "2015-04-01T14:31:47.617768Z",
-      "url": "http://swapi.co/api/films/99999999/"
+      "url": "https://swapi.dev/api/films/99999999/"
     }
   ]
 }

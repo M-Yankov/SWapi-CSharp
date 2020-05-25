@@ -4,10 +4,10 @@
 // Created          : 02-27-2016
 //
 // Last Modified By : M.Yankov
-// Last Modified On : 03-17-2016
+// Last Modified On : 05-25-2020
 // ***********************************************************************
 // <copyright file="Helper.cs" company="M-Yankov">
-//     Copyright ©  2016
+//     Copyright ©  2020
 // </copyright>
 // <summary>Contains Helper class.</summary>
 // ***********************************************************************
@@ -23,7 +23,7 @@ namespace StarWarsApiCSharp
     internal class Helper<T> where T : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the results downloaded from http://SWAPI.co/.
+        /// Gets or sets the results downloaded from data service.
         /// </summary>
         /// <value>The results.</value>
         [JsonProperty]

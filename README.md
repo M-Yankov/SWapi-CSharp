@@ -1,5 +1,5 @@
 # SWapi-CSharp
-#### Helper library for consuming data from http://swapi.co/
+#### Helper library for consuming data from https://swapi.dev/
 
 [![Build status](https://ci.appveyor.com/api/projects/status/xoi0pbdwbr1bnti0/branch/master?svg=true)](https://ci.appveyor.com/project/M-Yankov/swapi-csharp/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/M-Yankov/SWapi-CSharp/badge.svg?branch=master)](https://coveralls.io/github/M-Yankov/SWapi-CSharp?branch=master)
@@ -112,6 +112,7 @@ Console.WriteLine(person.Created);
 <a href="./Structure.png">
     <img src="./Structure.png" width="750" />
 </a>
+
 ### Examples
 
 Using  `Repository<T>` class:
@@ -151,7 +152,7 @@ The repository has two main methods for consume entities:
         Console.WriteLine("Vehicle {0} has {1} films:", vehicle.Name, vehicle.Films.Count);
         foreach (var film in vehicle.Films)
         {
-            // GetFilmId is a helper method just for extracting the id from the url. Example: http://swapi.co/api/films/2/ - will return only 2.
+            // GetFilmId is a helper method just for extracting the id from the url. Example: https://swapi.dev/api/films/2/ - will return only 2.
             int filmId = this.GetFilmId(film);
         
             // getting related items should be done manual
@@ -188,7 +189,7 @@ The repository has two main methods for consume entities:
 
 1. `GetEntities(int page = 1, int size = 10)`
 
-    By default size is from http://swapi.co/api is 10. 
+    By default size is from https://swapi.dev/api is 10. 
     You can pass the page and size for getting entities, but you should know that if you want size 20 and page 3 it will start from 3-rd page and will collect entities from next pages until size is reached or next page is `null`.
     So all pages have 10 entities and with parameters above, the method will return entities on page 3 and 4.
 
@@ -250,7 +251,7 @@ The repository has two main methods for consume entities:
 
 All of the examples can be seen in the repository [`Example`](/Example) project.
 
-Full documentation about http://swapi.co/ [Documentation](http://swapi.co/documentation)
+SWApi documentation [here](https://swapi.dev/documentation)
 
-If you find a bug or something doesn't working [Submit here](https://github.com/M-Yankov/SWapi-CSharp/issues) 
+If you find a bug or something doesn't working submit [here](https://github.com/M-Yankov/SWapi-CSharp/issues) 
 
